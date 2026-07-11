@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research & Volunteer | Abroad Safaris LTD</title>
+    <meta name="description" content="Join meaningful education, healthcare, research and community programs across East Africa with Abroad Safaris LTD.">
+    
+    <!-- Fonts and Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/global.css">
+    
+    <style>
+        .program-card {
+            background: white;
+            padding: var(--spacing-md);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-normal);
+            text-align: center;
+            border-bottom: 4px solid transparent;
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-bottom-color: var(--color-accent);
+        }
+
+        .program-icon {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .partner-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--color-neutral-300);
+            padding: 2.5rem 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            color: var(--color-primary-dark);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .partner-card h3 {
+            color: var(--color-primary-dark);
+            margin-bottom: 1rem;
+        }
+
+        .partner-card p {
+            color: var(--color-neutral-700);
+            opacity: 1;
+            line-height: 1.6;
+        }
+
+        .why-block {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .why-icon {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background: var(--color-primary-dark);
+            color: var(--color-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .video-container {
+            position: relative;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            aspect-ratio: 16 / 9;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Form Styling */
+        .application-form {
+            background: white;
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-lg);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--color-primary-dark);
+        }
+
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid var(--color-neutral-300);
+            border-radius: 8px;
+            font-family: var(--font-body);
+            transition: var(--transition-fast);
+        }
+
+        .form-group input:focus, 
+        .form-group select:focus, 
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(160, 82, 45, 0.1);
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background-color: var(--color-primary-dark);
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background-color: var(--color-primary-dark);
+            z-index: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white !important;
+            padding: var(--spacing-xl) 0;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content h1, 
+        .hero-content p, 
+        .hero-content .eyebrow {
+            color: white !important;
+        }
+
+        .hero-content h1 span {
+            color: var(--color-accent);
+        }
+
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Abroad Safaris Logo">
+                Abroad Safaris <span style="color: var(--color-accent);">LTD</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="explore.html">Explore East Africa</a></li>
+                <li><a href="tours.html">Tours & Packages</a></li>
+                <li><a href="research-volunteer.html" class="active">Research & Volunteer</a></li>
+                <li><a href="blog.html">Blog & Travel tips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="#apply" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.875rem;">Apply Now</a>
+                <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 80vh; display: flex; align-items: center; padding: var(--spacing-xl) 0; position: relative;">
+        <img src="images/volunteer1.jpg.jfif" alt="Volunteer Program" class="hero-bg">
+        <div class="hero-overlay" style="background: linear-gradient(rgba(13, 33, 25, 0.7), rgba(13, 33, 25, 0.5));"></div>
+        <div class="container hero-content">
+            <span class="eyebrow reveal">Purpose-Driven Travel</span>
+            <h1 class="reveal" style="transition-delay: 0.1s; font-size: clamp(2.5rem, 5vw, 4rem);">Travel with Purpose. <br>Create <span>Impact.</span></h1>
+            <p class="hero-subtitle reveal" style="transition-delay: 0.2s; max-width: 700px;">
+                Join meaningful education, healthcare, research and community programs across East Africa while experiencing authentic local culture.
+            </p>
+            <div class="reveal" style="transition-delay: 0.3s;">
+                <a href="#apply" class="btn btn-accent">Apply Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Categories -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center reveal" style="text-align: center; margin-bottom: var(--spacing-lg);">
+                <span class="eyebrow" style="color: var(--color-primary);">Opportunities</span>
+                <h2 class="section-title">Our Program Categories</h2>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-md);">
+                <div class="program-card reveal">
+                    <div class="program-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Education</h3>
+                    <p>Support local schools through teaching, curriculum development, and educational workshops.</p>
+                </div>
+                <div class="program-card reveal" style="transition-delay: 0.1s;">
+                    <div class="program-icon"><i class="fas fa-hand-holding-medical"></i></div>
+                    <h3>Healthcare</h3>
+                    <p>Assist in community clinics and hospitals, providing vital support to local healthcare professionals.</p>
+                </div>
+                <div class="program-card reveal" style="transition-delay: 0.2s;">
+                    <div class="program-icon"><i class="fas fa-microscope"></i></div>
+                    <h3>Research</h3>
+                    <p>Participate in wildlife conservation research or social studies in collaboration with local universities.</p>
+                </div>
+                <div class="program-card reveal" style="transition-delay: 0.3s;">
+                    <div class="program-icon"><i class="fas fa-users-cog"></i></div>
+                    <h3>Community Development</h3>
+                    <p>Engage in infrastructure projects, social entrepreneurship, and sustainable living initiatives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Empowering Local Communities Section -->
+    <section class="section" style="background-color: var(--color-neutral-100);">
+        <div class="container">
+            <div class="text-center reveal" style="text-align: center; margin-bottom: var(--spacing-lg);">
+                <span class="eyebrow" style="color: var(--color-accent);">Sustainability in Action</span>
+                <h2 class="section-title">Empowering Local Communities</h2>
+                <p class="section-subtitle" style="margin: 0 auto;">Beyond creating unforgettable travel experiences, Abroad Safaris LTD works closely with local communities, especially women and youth groups, supporting sustainable economic opportunities created through tourism. Through craft markets, cultural performances, guiding services, and other community-led initiatives, tourism helps improve livelihoods and strengthen local resilience.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg);">
+                <div class="glass-card reveal" style="border: 1px solid var(--color-neutral-300);">
+                    <div style="width: 60px; height: 60px; background: rgba(224, 168, 0, 0.1); color: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.5rem;">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <h4 style="margin-bottom: 1rem;">Women Empowerment</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-neutral-800);">Supporting female-led cooperatives and artisan groups to provide sustainable income for families.</p>
+                </div>
+                <div class="glass-card reveal" style="border: 1px solid var(--color-neutral-300); transition-delay: 0.1s;">
+                    <div style="width: 60px; height: 60px; background: rgba(31, 77, 58, 0.1); color: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.5rem;">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4 style="margin-bottom: 1rem;">Youth Development</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-neutral-800);">Investing in education and professional training for the next generation of East African leaders.</p>
+                </div>
+                <div class="glass-card reveal" style="border: 1px solid var(--color-neutral-300); transition-delay: 0.2s;">
+                    <div style="width: 60px; height: 60px; background: rgba(139, 94, 60, 0.1); color: #8B5E3C; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.5rem;">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h4 style="margin-bottom: 1rem;">Community Entrepreneurship</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-neutral-800);">Nurturing local startups and small businesses that thrive alongside the tourism industry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Institutions -->
+    <section class="section" style="background-color: var(--color-primary-dark); color: white;">
+        <div class="container">
+            <div class="text-center reveal" style="text-align: center; margin-bottom: var(--spacing-lg);">
+                <span class="eyebrow" style="color: var(--color-accent);">Collaborations</span>
+                <h2 class="section-title" style="color: white;">Our Trusted Local Partnerships</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.7); margin: 0 auto;">Built through long-term relationships across Rwanda and East Africa.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-md);">
+                <div class="partner-card reveal">
+                    <h3>Schools & Universities</h3>
+                    <p style="font-size: 0.9rem; opacity: 0.8;">Collaborating with educational institutions for knowledge exchange and research.</p>
+                </div>
+                <div class="partner-card reveal" style="transition-delay: 0.1s;">
+                    <h3>Hospitals & Clinics</h3>
+                    <p style="font-size: 0.9rem; opacity: 0.8;">Supporting local healthcare providers with volunteer medical assistance.</p>
+                </div>
+                <div class="partner-card reveal" style="transition-delay: 0.2s;">
+                    <h3>NGOs & Community Organizations</h3>
+                    <p style="font-size: 0.9rem; opacity: 0.8;">Partnering with grassroots organizations for sustainable impact projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section">
+        <div class="container">
+            <div class="reveal" style="max-width: 800px; margin: 0 auto;">
+                <div style="margin-bottom: 2rem; text-align: center;">
+                    <img src="images/volunteer2.jpg.jfif" alt="Why Volunteer" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-lg);">
+                </div>
+                <div class="text-center" style="text-align: center; margin-bottom: 3rem;">
+                    <span class="eyebrow">The Abroad Advantage</span>
+                    <h2 class="section-title">Create Impact Through Travel</h2>
+                    <p style="color: var(--color-neutral-700); max-width: 600px; margin: 1rem auto 0; font-size: 1.1rem; line-height: 1.6;">
+                        “Join meaningful programs that support local communities while experiencing the authentic heart of East Africa.”
+                    </p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                    <div class="why-block">
+                        <div class="why-icon"><i class="fas fa-handshake"></i></div>
+                        <div>
+                            <h4>Local partnerships</h4>
+                            <p>Direct connections with vetted local institutions ensuring your contribution is meaningful.</p>
+                        </div>
+                    </div>
+                    <div class="why-block">
+                        <div class="why-icon"><i class="fas fa-user-check"></i></div>
+                        <div>
+                            <h4>Tailored placements</h4>
+                            <p>We match your skills and interests with the specific needs of our partner organizations.</p>
+                        </div>
+                    </div>
+                    <div class="why-block">
+                        <div class="why-icon"><i class="fas fa-globe-africa"></i></div>
+                        <div>
+                            <h4>Cultural immersion</h4>
+                            <p>Deep dive into local life with authentic community stays and cultural exchanges.</p>
+                        </div>
+                    </div>
+                    <div class="why-block">
+                        <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div>
+                            <h4>Safe onboarding support</h4>
+                            <p>Comprehensive pre-departure briefings and 24/7 local support during your stay.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section id="apply" class="section" style="background-color: var(--color-neutral-200);">
+        <div class="container">
+            <div class="text-center reveal" style="text-align: center; margin-bottom: var(--spacing-lg);">
+                <span class="eyebrow" style="color: var(--color-primary);">Join Us</span>
+                <h2 class="section-title">Program Application Form</h2>
+                <p class="section-subtitle" style="margin: 0 auto;">Take the first step towards a journey of impact and discovery.</p>
+            </div>
+
+            <form class="application-form reveal">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <input type="text" id="country" name="country" placeholder="Your current country" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">Program Interest</label>
+                        <select id="interest" name="interest" required>
+                            <option value="" disabled selected>Select a program</option>
+                            <option value="education">Education</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="research">Research</option>
+                            <option value="community">Community Development</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">Preferred Destination</label>
+                        <select id="destination" name="destination" required>
+                            <option value="" disabled selected>Select destination</option>
+                            <option value="rwanda">Rwanda</option>
+                            <option value="kenya">Kenya</option>
+                            <option value="tanzania">Tanzania</option>
+                            <option value="uganda">Uganda</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="duration">Duration</label>
+                        <input type="text" id="duration" name="duration" placeholder="e.g. 2 weeks, 1 month" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="start-date">Preferred Start Date</label>
+                        <input type="date" id="start-date" name="start-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="background">Background/Experience</label>
+                        <input type="text" id="background" name="background" placeholder="Your skills or studies" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us more about your motivation..."></textarea>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button type="submit" class="btn btn-accent" style="min-width: 200px;">Apply Now</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
+                        <img src="images/logo.png" alt="Abroad Safaris Logo" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid var(--color-accent);">
+                        <div>
+                            <h3 style="color: var(--color-accent); margin: 0; font-size: 1.25rem;">Abroad Safaris LTD</h3>
+                            <span style="font-size: 0.65rem; letter-spacing: 2px; color: rgba(255,255,255,0.5);">EAST AFRICA SPECIALISTS</span>
+                        </div>
+                    </div>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 1.5rem;">Rwanda-born safari specialists across East Africa.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/abroad.safaris" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/abroadsafaris" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@abroad.s" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="explore.html#rwanda">Rwanda</a></li>
+                        <li><a href="explore.html#kenya">Kenya</a></li>
+                        <li><a href="explore.html#tanzania">Tanzania</a></li>
+                        <li><a href="explore.html#uganda">Uganda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="tours.html">Tours & Packages</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:abroad.safaris@gmail.com">abroad.safaris@gmail.com</a></li>
+                        <li><a href="tel:+250782773963">+250 782 773 963</a></li>
+                        <li><a href="https://wa.me/250782773963" target="_blank">WhatsApp us</a></li>
+                        <li style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-top: 1rem;">KG 5 Ave, Gasabo District, Kigali, Rwanda</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Abroad Safaris LTD. All rights reserved. Licensed since 2018.</p>
+                <div class="footer-pills">
+                    <div class="pill">rw <span>Rwanda</span></div>
+                    <div class="pill">ke <span>Kenya</span></div>
+                    <div class="pill">tz <span>Tanzania</span></div>
+                    <div class="pill">ug <span>Uganda</span></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

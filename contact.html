@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Abroad Safaris LTD</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/global.css">
+    
+    <style>
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: var(--spacing-xl);
+            margin-top: 0; /* Removed negative margin to fix overlap error */
+        }
+
+        .contact-info {
+            background: var(--color-primary);
+            color: white;
+            padding: var(--spacing-md) var(--spacing-lg);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--color-accent);
+            margin-top: 4px;
+        }
+
+        .contact-item h4 {
+            color: white;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-item p {
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+
+        .form-container {
+            background: var(--color-neutral-100);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--color-neutral-900);
+            font-size: 0.875rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid var(--color-neutral-300);
+            border-radius: var(--border-radius);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            background: var(--color-neutral-200);
+            transition: var(--transition-fast);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            background: var(--color-neutral-100);
+            box-shadow: 0 0 0 4px rgba(31, 77, 58, 0.1);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        .radio-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .radio-btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--color-neutral-300);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition-fast);
+            font-size: 0.875rem;
+        }
+        
+        input[type="radio"] {
+            display: none;
+        }
+        
+        input[type="radio"]:checked + .radio-btn {
+            background: var(--color-primary);
+            color: white;
+            border-color: var(--color-primary);
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Abroad Safaris Logo">
+                Abroad Safaris <span style="color: var(--color-accent);">LTD</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="explore.html">Explore East Africa</a></li>
+                <li><a href="tours.html">Tours & Packages</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog & Travel tips</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="contact.html" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.875rem;">Plan Your Trip</a>
+                <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <img src="images/tour-guides.jpg.jfif" alt="Abroad Safaris Guides" class="page-header-bg" style="opacity: 0.4; object-position: center 35%; transform: scale(1.25); transform-origin: center;">
+        <div class="container reveal">
+            <span class="eyebrow" style="color: var(--color-accent); margin-bottom: 1rem; display: block; letter-spacing: 2px;">Get In Touch</span>
+            <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); color: white; margin-bottom: 1rem;">Let's Plan Your Journey</h1>
+            <p style="opacity: 0.8; max-width: 600px; margin: 0 auto;">Ready to start planning the adventure of a lifetime? Our team of East Africa experts is here to help craft your perfect itinerary.</p>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="section" style="background-color: var(--color-neutral-200); padding-top: var(--spacing-xl);">
+        <div class="container contact-grid">
+            
+            <!-- Contact Info -->
+            <div class="contact-info reveal">
+                <h3 style="color: white; font-size: 1.5rem; margin-bottom: 2rem;">Get in Touch</h3>
+                
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Head Office</h4>
+                        <p>Kigali, Rwanda<br>KG 5 Ave, Gasabo District</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <h4>Call / WhatsApp</h4>
+                        <p>+250 782 773 963<br>Mon-Fri, 8am to 6pm CAT</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email Us</h4>
+                        <p>abroad.safaris@gmail.com<br>bookings@abroadsafaris.com</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 3rem;">
+                    <h4 style="color: white; margin-bottom: 1rem;">Follow Our Adventures</h4>
+                    <div style="display: flex; gap: 1rem; font-size: 1.5rem;">
+                        <a href="https://www.instagram.com/abroad.safaris" target="_blank" style="color: var(--color-accent);"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/abroadsafaris" target="_blank" style="color: var(--color-accent);"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.tiktok.com/@abroad.s" target="_blank" style="color: var(--color-accent);"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form / Quiz -->
+            <div class="form-container reveal" style="transition-delay: 0.2s;" id="quiz">
+                <h2 style="font-size: 2rem; margin-bottom: 0.5rem; color: var(--color-primary-dark);">Plan My Trip</h2>
+                <p style="color: var(--color-neutral-800); margin-bottom: 2rem;">Fill out the form below for a general inquiry or custom itinerary request.</p>
+                
+                <form action="mailto:abroad.safaris@gmail.com" method="POST" enctype="text/plain">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">First Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Last Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone Number (Optional)</label>
+                            <input type="tel" class="form-control">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Which countries are you interested in?</label>
+                        <div class="radio-group">
+                            <label><input type="checkbox"> <span class="radio-btn">Rwanda</span></label>
+                            <label><input type="checkbox"> <span class="radio-btn">Kenya</span></label>
+                            <label><input type="checkbox"> <span class="radio-btn">Tanzania</span></label>
+                            <label><input type="checkbox"> <span class="radio-btn">Uganda</span></label>
+                            <label><input type="checkbox"> <span class="radio-btn">Not sure yet</span></label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Estimated Travel Date</label>
+                            <input type="month" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Number of Travellers</label>
+                            <input type="number" class="form-control" min="1" placeholder="2">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Tell us about your dream safari</label>
+                        <textarea class="form-control" placeholder="Are you interested in gorillas, the great migration, family travel, or luxury lodges? Let us know what matters most to you..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Inquiry</button>
+                </form>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
+                        <img src="images/logo.png" alt="Abroad Safaris Logo" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid var(--color-accent);">
+                        <div>
+                            <h3 style="color: var(--color-accent); margin: 0; font-size: 1.25rem;">Abroad Safaris LTD</h3>
+                            <span style="font-size: 0.65rem; letter-spacing: 2px; color: rgba(255,255,255,0.5);">EAST AFRICA SPECIALISTS</span>
+                        </div>
+                    </div>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 1.5rem;">Rwanda-born safari specialists across East Africa.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/abroad.safaris" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/abroadsafaris" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@abroad.s" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="explore.html#rwanda">Rwanda</a></li>
+                        <li><a href="explore.html#kenya">Kenya</a></li>
+                        <li><a href="explore.html#tanzania">Tanzania</a></li>
+                        <li><a href="explore.html#uganda">Uganda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="tours.html">Tours & Packages</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:abroad.safaris@gmail.com">abroad.safaris@gmail.com</a></li>
+                        <li><a href="tel:+250782773963">+250 782 773 963</a></li>
+                        <li><a href="https://wa.me/250782773963" target="_blank">WhatsApp us</a></li>
+                        <li style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-top: 1rem;">KG 5 Ave, Gasabo District, Kigali, Rwanda</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Abroad Safaris LTD. All rights reserved. Licensed since 2018.</p>
+                <div class="footer-pills">
+                    <div class="pill">rw <span>Rwanda</span></div>
+                    <div class="pill">ke <span>Kenya</span></div>
+                    <div class="pill">tz <span>Tanzania</span></div>
+                    <div class="pill">ug <span>Uganda</span></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
