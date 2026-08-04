@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | Abroad Safaris LTD</title>
-    <meta name="description" content="Discover premium transport solutions and impactful research & volunteer programs across East Africa with Abroad Safaris LTD.">
+    <title>Our Services | Abroad Safaris</title>
+    <meta name="description" content="Discover premium transport solutions and impactful research & volunteer programs across East Africa with Abroad Safaris.">
     
     <!-- Fonts and Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -478,28 +478,8 @@
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="container nav">
-            <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Abroad Safaris Logo">
-                Abroad Safaris <span style="color: var(--color-accent);">LTD</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="explore.html">Explore East Africa</a></li>
-                <li><a href="tours.html">Tours & Packages</a></li>
-                <li><a href="services.html" class="active">Services</a></li>
-                <li><a href="blog.html">Blog & Travel tips</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-            <div style="display: flex; align-items: center; gap: 1rem;">
-                <a href="contact.html" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.875rem;">Plan Your Trip</a>
-                <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
-            </div>
-        </div>
-    </header>
+    <!-- Header (injected) -->
+    <div id="site-header"></div>
 
     <!-- Page Header (Transport Services Hero) -->
     <div class="page-header" id="transport-hero">
@@ -508,7 +488,7 @@
             <span class="eyebrow" style="color: var(--color-accent); margin-bottom: 1rem; display: block; letter-spacing: 2px;">Transport & Logistics</span>
             <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); color: white; margin-bottom: 1rem;">Reliable Transport Across East Africa</h1>
             <p style="opacity: 0.9; max-width: 800px; margin: 0 auto 2rem; font-size: 1.15rem; line-height: 1.6;">
-                Whether you're arriving for a safari, business trip, research project, or cultural experience, Abroad Safaris LTD offers reliable transport solutions across Rwanda and neighboring East African countries.
+                Whether you're arriving for a safari, business trip, research project, or cultural experience, Abroad Safaris offers reliable transport solutions across Rwanda and neighboring East African countries.
             </p>
             <div>
                 <a href="#transport-quote" class="btn btn-accent">Request a Transport Quote</a>
@@ -519,8 +499,8 @@
     <!-- Sticky Services Navigation Bar -->
     <nav class="services-nav-section">
         <div class="container services-nav-container">
-            <a href="#transport-services" class="services-nav-btn active">Transport Services</a>
-            <a href="#volunteer-programs" class="services-nav-btn">Research & Volunteer</a>
+            <a href="#transport-services" class="services-nav-btn active" data-i18n="services.nav.transport">Transport Services</a>
+            <a href="#volunteer-programs" class="services-nav-btn" data-i18n="services.nav.volunteer">Research &amp; Volunteer</a>
         </div>
     </nav>
 
@@ -530,109 +510,105 @@
             
             <!-- Sub-section: Our Transport Services -->
             <div class="text-center reveal" style="text-align: center; margin-bottom: var(--spacing-lg);">
-                <span class="eyebrow" style="color: var(--color-primary);">Reliability in Motion</span>
-                <h2 class="section-title">Our Transport Services</h2>
-                <p class="section-subtitle" style="margin: 0 auto;">We offer customizable transport solutions tailored to fit the demands of your itinerary.</p>
+                <span class="eyebrow" style="color: var(--color-primary);" data-i18n="services.transport.eyebrow">Reliability in Motion</span>
+                <h2 class="section-title" data-i18n="services.transport.title">Our Transport Services</h2>
+                <p class="section-subtitle" style="margin: 0 auto;" data-i18n="services.transport.subtitle">We offer customizable transport solutions tailored to fit the demands of your itinerary.</p>
             </div>
 
             <div class="service-grid">
                 <!-- Airport Transfers -->
                 <div class="service-card reveal">
                     <div class="service-icon"><i class="fas fa-plane-arrival"></i></div>
-                    <h3>Airport Transfers</h3>
-                    <p>Convenient and punctual pickups and drop-offs at Kigali International Airport and regional airports across East Africa.</p>
+                    <h3 data-i18n="services.transport.card1.title">Airport Transfers</h3>
+                    <p data-i18n="services.transport.card1.desc">Convenient and punctual pickups and drop-offs at Kigali International Airport and regional airports across East Africa.</p>
                 </div>
                 <!-- Car Rental -->
                 <div class="service-card reveal" style="transition-delay: 0.1s;">
                     <div class="service-icon"><i class="fas fa-car"></i></div>
-                    <h3>Car Rental</h3>
-                    <p>Flexible car hire options for independent travelers, corporate clients, or project coordinators visiting the region.</p>
+                    <h3 data-i18n="services.transport.card2.title">Car Rental</h3>
+                    <p data-i18n="services.transport.card2.desc">Flexible car hire options for independent travelers, corporate clients, or project coordinators visiting the region.</p>
                 </div>
                 <!-- Chauffeur Services -->
                 <div class="service-card reveal" style="transition-delay: 0.2s;">
                     <div class="service-icon"><i class="fas fa-user-tie"></i></div>
-                    <h3>Chauffeur Services</h3>
-                    <p>Travel with professional, experienced local drivers who handle all routes, navigation, and traffic for you.</p>
+                    <h3 data-i18n="services.transport.card3.title">Chauffeur Services</h3>
+                    <p data-i18n="services.transport.card3.desc">Travel with professional, experienced local drivers who handle all routes, navigation, and traffic for you.</p>
                 </div>
                 <!-- Safari Vehicles -->
                 <div class="service-card reveal" style="transition-delay: 0.3s;">
                     <div class="service-icon"><i class="fas fa-compass"></i></div>
-                    <h3>Safari Vehicles</h3>
-                    <p>Custom-built 4x4 land cruisers equipped with pop-up roofs, photographic windows, and charging ports for game drives.</p>
+                    <h3 data-i18n="services.transport.card4.title">Safari Vehicles</h3>
+                    <p data-i18n="services.transport.card4.desc">Custom-built 4x4 land cruisers equipped with pop-up roofs, photographic windows, and charging ports for game drives.</p>
                 </div>
                 <!-- Cross-Border Transfers -->
                 <div class="service-card reveal" style="transition-delay: 0.4s;">
                     <div class="service-icon"><i class="fas fa-globe-africa"></i></div>
-                    <h3>Cross-Border Transfers</h3>
-                    <p>Seamless inter-country transport services between Rwanda, Uganda, Kenya, and Tanzania, including border-clearing support.</p>
+                    <h3 data-i18n="services.transport.card5.title">Cross-Border Transfers</h3>
+                    <p data-i18n="services.transport.card5.desc">Seamless inter-country transport services between Rwanda, Uganda, Kenya, and Tanzania, including border-clearing support.</p>
                 </div>
             </div>
             
             <!-- Sub-section: Our Fleet -->
             <div class="text-center reveal" style="text-align: center; margin-top: var(--spacing-lg); margin-bottom: var(--spacing-lg);">
-                <span class="eyebrow" style="color: var(--color-primary);">Vetted & Maintained</span>
-                <h2 class="section-title">Our Fleet</h2>
-                <p class="section-subtitle" style="margin: 0 auto;">Explore our range of premium vehicles kept in excellent road condition for safe travel.</p>
+                <span class="eyebrow" style="color: var(--color-primary);" data-i18n="services.fleet.eyebrow">Vetted &amp; Maintained</span>
+                <h2 class="section-title" data-i18n="services.fleet.title">Our Fleet</h2>
+                <p class="section-subtitle" style="margin: 0 auto;" data-i18n="services.fleet.subtitle">Explore our range of premium vehicles kept in excellent road condition for safe travel.</p>
             </div>
 
             <div class="fleet-grid">
-                <!-- Toyota Land Cruiser -->
+                <!-- Toyota Land Cruiser V8 -->
                 <div class="fleet-card reveal">
-                    <div class="fleet-image-placeholder">
-                        <i class="fas fa-car-side"></i>
-                        <span>Toyota Land Cruiser</span>
+                    <div class="fleet-image-placeholder" style="padding: 0; overflow: hidden;">
+                        <img src="images/v8-transport.jpg" alt="Toyota Land Cruiser V8" style="width:100%; height:200px; object-fit:cover; display:block;">
                     </div>
                     <div class="fleet-info">
-                        <h3>Toyota Land Cruiser</h3>
-                        <p>Our heavy-duty 4x4 safari cruiser, designed to tackle rugged savanna tracks. Features large pop-up roofs for game viewing and charging ports.</p>
+                        <h3 data-i18n="services.fleet.v8.title">Toyota Land Cruiser V8</h3>
+                        <p data-i18n="services.fleet.v8.desc">Our heavy-duty 4x4 safari cruiser, designed to tackle rugged savanna tracks. Features large pop-up roofs for game viewing and charging ports.</p>
                         <div class="fleet-capacity">
                             <i class="fas fa-users"></i>
-                            <span>Capacity: Up to 7 Passengers</span>
+                            <span data-i18n="services.fleet.v8.capacity">Capacity: Up to 7 Passengers</span>
                         </div>
                     </div>
                 </div>
-                <!-- Toyota Prado -->
+                <!-- Kia Sorento -->
                 <div class="fleet-card reveal" style="transition-delay: 0.1s;">
-                    <div class="fleet-image-placeholder">
-                        <i class="fas fa-car-side"></i>
-                        <span>Toyota Prado</span>
+                    <div class="fleet-image-placeholder" style="padding: 0; overflow: hidden;">
+                        <img src="images/KIA-TRANSPORT.JPG" alt="Kia Sorento" style="width:100%; height:200px; object-fit:cover; display:block;">
                     </div>
                     <div class="fleet-info">
-                        <h3>Toyota Prado</h3>
-                        <p>Comfortable and prestigious 4x4 SUV, perfect for business meetings, airport transfers, and long-distance travel on paved or unpaved roads.</p>
+                        <h3 data-i18n="services.fleet.sorento.title">Kia Sorento</h3>
+                        <p data-i18n="services.fleet.sorento.desc">Comfortable and prestigious transport for business meetings, airport transfers, and long-distance travel on paved or unpaved roads.</p>
                         <div class="fleet-capacity">
                             <i class="fas fa-users"></i>
-                            <span>Capacity: Up to 5 Passengers</span>
+                            <span data-i18n="services.fleet.sorento.capacity">Capacity: Up to 5 Passengers</span>
                         </div>
                     </div>
                 </div>
-                <!-- Toyota Hiace -->
+                <!-- Toyota Hiace Minibus -->
                 <div class="fleet-card reveal" style="transition-delay: 0.2s;">
-                    <div class="fleet-image-placeholder">
-                        <i class="fas fa-car-side"></i>
-                        <span>Toyota Hiace</span>
+                    <div class="fleet-image-placeholder" style="padding: 0; overflow: hidden;">
+                        <img src="images/minibus-transport.jpg" alt="Minibus and Bus (Coaster)" style="width:100%; height:200px; object-fit:cover; display:block;">
                     </div>
                     <div class="fleet-info">
-                        <h3>Toyota Hiace</h3>
-                        <p>Versatile extended minibus ideal for medium-sized tour groups, research teams, or corporate delegations looking for a reliable, air-conditioned ride.</p>
+                        <h3 data-i18n="services.fleet.coaster.title">Minibus and Bus (Coaster)</h3>
+                        <p data-i18n="services.fleet.coaster.desc">Versatile minibus and bus transport ideal for medium-sized tour groups, research teams, or corporate delegations looking for a reliable, air-conditioned ride.</p>
                         <div class="fleet-capacity">
                             <i class="fas fa-users"></i>
-                            <span>Capacity: Up to 14 Passengers</span>
+                            <span data-i18n="services.fleet.coaster.capacity">Capacity: Up to 14 Passengers</span>
                         </div>
                     </div>
                 </div>
-                <!-- Coaster Bus -->
+                <!-- Toyota Coaster Bus -->
                 <div class="fleet-card reveal" style="transition-delay: 0.3s;">
-                    <div class="fleet-image-placeholder">
-                        <i class="fas fa-bus"></i>
-                        <span>Coaster Bus</span>
+                    <div class="fleet-image-placeholder" style="padding: 0; overflow: hidden;">
+                        <img src="images/coaster-transport.jpg" alt="Toyota Coaster Bus" style="width:100%; height:200px; object-fit:cover; display:block;">
                     </div>
                     <div class="fleet-info">
-                        <h3>Coaster Bus</h3>
-                        <p>Spacious passenger bus designed for large groups, school excursions, or wedding parties traveling comfortably across East Africa with plenty of luggage space.</p>
+                        <h3 data-i18n="services.fleet.bus.title">Toyota Coaster Bus</h3>
+                        <p data-i18n="services.fleet.bus.desc">Spacious passenger bus designed for large groups, school excursions, or wedding parties traveling comfortably across East Africa with plenty of luggage space.</p>
                         <div class="fleet-capacity">
                             <i class="fas fa-users"></i>
-                            <span>Capacity: Up to 30 Passengers</span>
+                            <span data-i18n="services.fleet.bus.capacity">Capacity: Up to 30 Passengers</span>
                         </div>
                     </div>
                 </div>
@@ -640,34 +616,34 @@
 
             <!-- Sub-section: Why Choose Our Transport Services? -->
             <div class="text-center reveal" style="text-align: center; margin-top: var(--spacing-lg); margin-bottom: var(--spacing-lg);">
-                <span class="eyebrow" style="color: var(--color-primary);">Quality Guarantee</span>
-                <h2 class="section-title">Why Choose Our Transport Services?</h2>
+                <span class="eyebrow" style="color: var(--color-primary);" data-i18n="services.why.eyebrow">Quality Guarantee</span>
+                <h2 class="section-title" data-i18n="services.why.title">Why Choose Our Transport Services?</h2>
             </div>
 
             <div class="why-transport-grid">
                 <div class="why-transport-card reveal">
-                    <h4><i class="fas fa-check"></i> Experienced Drivers</h4>
-                    <p>Professional guides who speak multiple languages and possess deep knowledge of local routes and off-road driving.</p>
+                    <h4 data-i18n="services.why.card1.title"><i class="fas fa-check"></i> Professional Drivers</h4>
+                    <p data-i18n="services.why.card1.desc">Our experienced and professionally trained drivers prioritize safety, punctuality, comfort, and exceptional customer service.</p>
                 </div>
                 <div class="why-transport-card reveal" style="transition-delay: 0.1s;">
-                    <h4><i class="fas fa-check"></i> Comfortable Vehicles</h4>
-                    <p>Clean, spacious, fully air-conditioned vehicles outfitted with comfortable seats, safety belts, and luggage space.</p>
+                    <h4 data-i18n="services.why.card2.title"><i class="fas fa-check"></i> Comfortable Vehicles</h4>
+                    <p data-i18n="services.why.card2.desc">Clean, spacious, fully air-conditioned vehicles outfitted with comfortable seats, safety belts, and luggage space.</p>
                 </div>
                 <div class="why-transport-card reveal" style="transition-delay: 0.2s;">
-                    <h4><i class="fas fa-check"></i> Flexible Booking</h4>
-                    <p>Highly responsive reservation team, custom itineraries, and adaptive schedules to fit your traveling timeline.</p>
+                    <h4 data-i18n="services.why.card3.title"><i class="fas fa-check"></i> Flexible Booking</h4>
+                    <p data-i18n="services.why.card3.desc">Highly responsive reservation team, custom itineraries, and adaptive schedules to fit your traveling timeline.</p>
                 </div>
                 <div class="why-transport-card reveal" style="transition-delay: 0.3s;">
-                    <h4><i class="fas fa-check"></i> Safety & Reliability</h4>
-                    <p>GPS tracking, comprehensive commercial insurance coverage, and 24/7 breakdown assistance for peace of mind.</p>
+                    <h4 data-i18n="services.why.card4.title"><i class="fas fa-check"></i> Safety &amp; Reliability</h4>
+                    <p data-i18n="services.why.card4.desc">GPS tracking, comprehensive commercial insurance coverage, and 24/7 breakdown assistance for peace of mind.</p>
                 </div>
             </div>
 
             <!-- Sub-section: Coverage Area -->
             <div class="text-center reveal" style="text-align: center; margin-top: var(--spacing-lg); margin-bottom: var(--spacing-lg);">
-                <span class="eyebrow" style="color: var(--color-primary);">Our Network</span>
-                <h2 class="section-title">Coverage Area</h2>
-                <p class="section-subtitle" style="margin: 0 auto;">We operate across major borders and key transport corridors in East Africa.</p>
+                <span class="eyebrow" style="color: var(--color-primary);" data-i18n="services.coverage.eyebrow">Our Network</span>
+                <h2 class="section-title" data-i18n="services.coverage.title">Coverage Area</h2>
+                <p class="section-subtitle" style="margin: 0 auto;" data-i18n="services.coverage.subtitle">We operate across major borders and key transport corridors in East Africa.</p>
             </div>
 
             <div class="coverage-grid reveal">
@@ -691,62 +667,64 @@
 
             <!-- Sub-section: Transport Inquiry Form -->
             <div class="text-center reveal" style="text-align: center; margin-top: var(--spacing-lg); margin-bottom: var(--spacing-lg);" id="transport-quote">
-                <span class="eyebrow" style="color: var(--color-primary);">Quote Request</span>
-                <h2 class="section-title">Request a Transport Quote</h2>
-                <p class="section-subtitle" style="margin: 0 auto;">Submit your travel details and our logistics team will get back to you with a customized quote.</p>
+                <span class="eyebrow" style="color: var(--color-primary);" data-i18n="services.quote.eyebrow">Quote Request</span>
+                <h2 class="section-title" data-i18n="services.quote.title">Request a Transport Quote</h2>
+                <p class="section-subtitle" style="margin: 0 auto;" data-i18n="services.quote.subtitle">Submit your travel details and our logistics team will get back to you with a customized quote.</p>
             </div>
 
-            <form class="application-form reveal">
+            <form name="transport-quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="application-form reveal">
+                <input type="hidden" name="form-name" value="transport-quote">
+                <p style="display:none;"><label>Don’t fill this out if you're human: <input name="bot-field"></label></p>
                 <div class="form-grid">
                     <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        <label for="name" data-i18n="services.quote.name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" data-i18n-placeholder="services.quote.name.placeholder" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        <label for="email" data-i18n="services.quote.email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" data-i18n-placeholder="services.quote.email.placeholder" required>
                     </div>
                     <div class="form-group">
-                        <label for="phone">Phone / WhatsApp</label>
-                        <input type="tel" id="phone" name="phone" placeholder="e.g. +250 782 773 963" required>
+                        <label for="phone" data-i18n="services.quote.phone">Phone / WhatsApp</label>
+                        <input type="tel" id="phone" name="phone" placeholder="e.g. +250 782 773 963" data-i18n-placeholder="services.quote.phone.placeholder" required>
                     </div>
                     <div class="form-group">
-                        <label for="vehicle_pref">Vehicle Preference</label>
+                        <label for="vehicle_pref" data-i18n="services.quote.vehicle">Vehicle Preference</label>
                         <select id="vehicle_pref" name="vehicle_pref" required>
-                            <option value="" disabled selected>Select a vehicle</option>
-                            <option value="toyota_land_cruiser">Toyota Land Cruiser</option>
-                            <option value="toyota_prado">Toyota Prado</option>
-                            <option value="toyota_hiace">Toyota Hiace</option>
-                            <option value="coaster_bus">Coaster Bus</option>
+                            <option value="" disabled selected data-i18n="services.quote.vehicle.select">Select a vehicle</option>
+                            <option value="toyota_land_cruiser_suv" data-i18n="services.quote.vehicle.option1">Toyota Land Cruiser - SUV</option>
+                            <option value="minibus" data-i18n="services.quote.vehicle.option2">Minibus</option>
+                            <option value="minibus_and_coaster" data-i18n="services.quote.vehicle.option3">Minibus and Bus (Coaster)</option>
+                            <option value="others" data-i18n="services.quote.vehicle.option4">Others</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="pickup_loc">Pickup Location</label>
-                        <input type="text" id="pickup_loc" name="pickup_loc" placeholder="e.g. Kigali Airport, Hotel" required>
+                        <label for="pickup_loc" data-i18n="services.quote.pickup">Pickup Location</label>
+                        <input type="text" id="pickup_loc" name="pickup_loc" placeholder="e.g. Kigali Airport, Hotel" data-i18n-placeholder="services.quote.pickup.placeholder" required>
                     </div>
                     <div class="form-group">
-                        <label for="destination">Destination</label>
-                        <input type="text" id="destination" name="destination" placeholder="e.g. Volcanoes National Park, Uganda border" required>
+                        <label for="destination" data-i18n="services.quote.destination">Destination</label>
+                        <input type="text" id="destination" name="destination" placeholder="e.g. Volcanoes National Park, Uganda border" data-i18n-placeholder="services.quote.destination.placeholder" required>
                     </div>
                     <div class="form-group">
-                        <label for="pickup_date">Pickup Date</label>
+                        <label for="pickup_date" data-i18n="services.quote.date">Pickup Date</label>
                         <input type="date" id="pickup_date" name="pickup_date" required>
                     </div>
                     <div class="form-group">
-                        <label for="pickup_time">Pickup Time</label>
+                        <label for="pickup_time" data-i18n="services.quote.time">Pickup Time</label>
                         <input type="time" id="pickup_time" name="pickup_time" required>
                     </div>
                     <div class="form-group">
-                        <label for="passengers">Number of Passengers</label>
-                        <input type="number" id="passengers" name="passengers" min="1" placeholder="e.g. 4" required>
+                        <label for="passengers" data-i18n="services.quote.passengers">Number of Passengers</label>
+                        <input type="number" id="passengers" name="passengers" min="1" placeholder="e.g. 4" data-i18n-placeholder="services.quote.passengers.placeholder" required>
                     </div>
                     <div class="form-group full-width">
-                        <label for="requests">Additional Requests</label>
-                        <textarea id="requests" name="requests" rows="4" placeholder="e.g. child seats, luggage requirements, cross-border itinerary details..."></textarea>
+                        <label for="requests" data-i18n="services.quote.requests">Additional Requests</label>
+                        <textarea id="requests" name="requests" rows="4" placeholder="e.g. child seats, luggage requirements, cross-border itinerary details..." data-i18n-placeholder="services.quote.requests.placeholder"></textarea>
                     </div>
                 </div>
                 <div style="text-align: center; margin-top: 2rem;">
-                    <button type="submit" class="btn btn-accent" style="min-width: 250px;">Request a Transport Quote</button>
+                    <button type="submit" class="btn btn-accent" style="min-width: 250px;" data-i18n="services.quote.submit">Request a Transport Quote</button>
                 </div>
             </form>
 
@@ -758,10 +736,11 @@
         <div class="container">
 
             <div class="text-center reveal" style="text-align: center; margin-bottom: var(--spacing-lg);">
-                <span class="eyebrow" style="color: var(--color-accent);">Community & Impact</span>
-                <h2 class="section-title" style="color: white;">Research & Volunteer Programs</h2>
-                <p class="section-subtitle" style="color: rgba(255,255,255,0.8); margin: 0 auto;">
+                <span class="eyebrow" style="color: var(--color-accent);" data-i18n="services.volunteer.eyebrow">Community &amp; Impact</span>
+                <h2 class="section-title" style="color: white;" data-i18n="services.volunteer.title">Research &amp; Volunteer Programs</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.8); margin: 0 auto;" data-i18n="services.volunteer.subtitle">
                     Experience East Africa beyond tourism by contributing to meaningful education, healthcare, conservation, research, and community development initiatives through our trusted local partnerships.
+                    Volunteer opportunities are available in nursery schools, primary schools, secondary schools, universities, health institutions, community organizations, youth groups, and women’s groups or cooperatives.
                 </p>
             </div>
 
@@ -770,81 +749,81 @@
                 <!-- Education -->
                 <div class="program-card reveal">
                     <div class="program-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <h3>Education</h3>
-                    <p>Support local classrooms, teach English, lead creative activities, and assist teachers with lessons at community primary and secondary schools.</p>
+                    <h3 data-i18n="services.volunteer.card1.title">Education</h3>
+                    <p data-i18n="services.volunteer.card1.desc">Support local classrooms across nursery schools, primary and secondary schools, and universities — teaching English, leading creative activities, and assisting teachers with lessons in community learning environments. Nursery school volunteering opportunities are available.</p>
                 </div>
                 <!-- Healthcare -->
                 <div class="program-card reveal" style="transition-delay: 0.1s;">
                     <div class="program-icon"><i class="fas fa-hand-holding-medical"></i></div>
-                    <h3>Healthcare</h3>
-                    <p>Assist local nurses and doctors in rural health clinics, participate in hygiene education, and support healthcare access for vulnerable groups.</p>
+                    <h3 data-i18n="services.volunteer.card2.title">Healthcare</h3>
+                    <p data-i18n="services.volunteer.card2.desc">Assist local nurses and doctors in rural health institutions, participate in hygiene education, and support healthcare access for vulnerable groups.</p>
                 </div>
                 <!-- Community Development -->
                 <div class="program-card reveal" style="transition-delay: 0.2s;">
                     <div class="program-icon"><i class="fas fa-users-cog"></i></div>
-                    <h3>Community Development</h3>
-                    <p>Contribute to community-led infrastructure projects, clean water systems, and cooperative management alongside local leaders.</p>
+                    <h3 data-i18n="services.volunteer.card3.title">Community Development</h3>
+                    <p data-i18n="services.volunteer.card3.desc">Contribute to community-led infrastructure projects, clean water systems, and cooperative management alongside local leaders in community organizations and women’s groups.</p>
                 </div>
                 <!-- Youth & Women Empowerment -->
                 <div class="program-card reveal" style="transition-delay: 0.3s;">
                     <div class="program-icon"><i class="fas fa-people-carry-box"></i></div>
-                    <h3>Youth & Women Empowerment</h3>
-                    <p>Organize business skill workshops, IT training, and financial literacy classes for local women's cooperatives and youth associations.</p>
+                    <h3 data-i18n="services.volunteer.card4.title">Youth &amp; Women Empowerment</h3>
+                    <p data-i18n="services.volunteer.card4.desc">Organize business skill workshops, IT training, and financial literacy classes for local women’s cooperatives, youth groups, and community organizations.</p>
                 </div>
                 <!-- Environmental Conservation -->
                 <div class="program-card reveal" style="transition-delay: 0.4s;">
                     <div class="program-icon"><i class="fas fa-leaf"></i></div>
-                    <h3>Environmental Conservation</h3>
-                    <p>Participate in reforestation initiatives, sustainable farming education, and wildlife habitat protection plans across park margins.</p>
+                    <h3 data-i18n="services.volunteer.card5.title">Environmental Conservation</h3>
+                    <p data-i18n="services.volunteer.card5.desc">Participate in reforestation initiatives, sustainable farming education, and wildlife habitat protection plans across park margins.</p>
                 </div>
                 <!-- Academic Research -->
                 <div class="program-card reveal" style="transition-delay: 0.5s;">
                     <div class="program-icon"><i class="fas fa-microscope"></i></div>
-                    <h3>Academic Research</h3>
-                    <p>Partner with local universities and NGOs to gather and analyze field data on environmental, ecological, or community studies.</p>
+                    <h3 data-i18n="services.volunteer.card6.title">Academic Research</h3>
+                    <p data-i18n="services.volunteer.card6.desc">Partner with local universities and NGOs to gather and analyze field data on environmental, ecological, or community studies.</p>
                 </div>
             </div>
 
             <!-- Sub-section: Our Partners -->
             <div class="text-center reveal" style="text-align: center; margin-top: var(--spacing-lg); margin-bottom: var(--spacing-lg);">
-                <span class="eyebrow" style="color: var(--color-accent);">Trusted Alliances</span>
-                <h2 class="section-title" style="color: white;">Our Partners</h2>
-                <p class="section-subtitle" style="color: rgba(255,255,255,0.8); margin: 0 auto;">
+                <span class="eyebrow" style="color: var(--color-accent);" data-i18n="services.partners.eyebrow">Trusted Alliances</span>
+                <h2 class="section-title" style="color: white;" data-i18n="services.partners.title">Our Partners</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.8); margin: 0 auto;" data-i18n="services.partners.subtitle">
                     Abroad Safaris collaborates directly with vetted organizations to ensure ethical, safe, and community-first programs.
                 </p>
             </div>
 
             <div class="partner-grid">
                 <div class="partner-card reveal">
-                    <h4>Primary Schools</h4>
+                    <h4 data-i18n="services.partners.item1">Nursery Schools</h4>
                 </div>
                 <div class="partner-card reveal" style="transition-delay: 0.05s;">
-                    <h4>Secondary Schools</h4>
+                    <h4 data-i18n="services.partners.item2">Primary Schools</h4>
                 </div>
                 <div class="partner-card reveal" style="transition-delay: 0.1s;">
-                    <h4>Universities</h4>
+                    <h4 data-i18n="services.partners.item3">Secondary Schools</h4>
                 </div>
                 <div class="partner-card reveal" style="transition-delay: 0.15s;">
-                    <h4>Health Centers</h4>
+                    <h4 data-i18n="services.partners.item4">Universities &amp; Community Organizations</h4>
                 </div>
                 <div class="partner-card reveal" style="transition-delay: 0.2s;">
-                    <h4>Community Organizations</h4>
+                    <h4 data-i18n="services.partners.item5">Health Centers</h4>
                 </div>
                 <div class="partner-card reveal" style="transition-delay: 0.25s;">
-                    <h4>Women's Cooperatives</h4>
+                    <h4 data-i18n="services.partners.item6">Women's Cooperatives</h4>
                 </div>
                 <div class="partner-card reveal" style="transition-delay: 0.3s;">
-                    <h4>Youth Associations</h4>
+                    <h4 data-i18n="services.partners.item7">Youth Associations</h4>
                 </div>
                 <div class="partner-card reveal" style="transition-delay: 0.35s;">
-                    <h4>NGOs</h4>
+                    <h4 data-i18n="services.partners.item8">NGOs</h4>
                 </div>
             </div>
 
             <!-- Sub-section: Why Join Our Programs? -->
             <div class="text-center reveal" style="text-align: center; margin-top: var(--spacing-lg); margin-bottom: var(--spacing-lg);">
-                <span class="eyebrow" style="color: var(--color-accent);">The Abroad Experience</span>
-                <h2 class="section-title" style="color: white;">Why Join Our Programs?</h2>
+                <span class="eyebrow" style="color: var(--color-accent);" data-i18n="services.join.eyebrow">The Abroad Experience</span>
+                <h2 class="section-title" style="color: white;" data-i18n="services.join.title">Why Join Our Programs?</h2>
             </div>
 
             <div class="why-join-grid">
@@ -852,96 +831,98 @@
                 <div class="why-join-card reveal">
                     <div class="why-join-icon"><i class="fas fa-campground"></i></div>
                     <div class="why-join-info">
-                        <h4>Authentic cultural immersion</h4>
-                        <p>Live, learn, and cooperate alongside local communities for a deep, respectful understanding of local culture and traditions.</p>
+                        <h4 data-i18n="services.join.card1.title">Authentic cultural immersion</h4>
+                        <p data-i18n="services.join.card1.desc">Live, learn, and cooperate alongside local communities for a deep, respectful understanding of local culture and traditions.</p>
                     </div>
                 </div>
                 <!-- Local Support -->
                 <div class="why-join-card reveal" style="transition-delay: 0.1s;">
                     <div class="why-join-icon"><i class="fas fa-user-shield"></i></div>
                     <div class="why-join-info">
-                        <h4>Professional local support</h4>
-                        <p>Count on pre-departure training, comprehensive orientations, airport transfers, and 24/7 dedicated support staff.</p>
+                        <h4 data-i18n="services.join.card2.title">Professional local support</h4>
+                        <p data-i18n="services.join.card2.desc">Count on pre-departure training, comprehensive orientations, airport transfers, and 24/7 dedicated support staff.</p>
                     </div>
                 </div>
                 <!-- Community Impact -->
                 <div class="why-join-card reveal" style="transition-delay: 0.2s;">
                     <div class="why-join-icon"><i class="fas fa-heart"></i></div>
                     <div class="why-join-info">
-                        <h4>Community impact</h4>
-                        <p>Participate in vetted, long-term programs driven by genuine community goals that target actual sustainable needs.</p>
+                        <h4 data-i18n="services.join.card3.title">Community impact</h4>
+                        <p data-i18n="services.join.card3.desc">Participate in vetted, long-term programs driven by genuine community goals that target actual sustainable needs.</p>
                     </div>
                 </div>
                 <!-- Learning Opportunities -->
                 <div class="why-join-card reveal" style="transition-delay: 0.3s;">
                     <div class="why-join-icon"><i class="fas fa-lightbulb"></i></div>
                     <div class="why-join-info">
-                        <h4>Learning opportunities</h4>
-                        <p>Gain valuable, resume-boosting field experience, sharpen problem-solving skills, and acquire local language skills.</p>
+                        <h4 data-i18n="services.join.card4.title">Learning opportunities</h4>
+                        <p data-i18n="services.join.card4.desc">Gain valuable, resume-boosting field experience, sharpen problem-solving skills, and acquire local language skills.</p>
                     </div>
                 </div>
                 <!-- Safe & Ethical -->
                 <div class="why-join-card reveal" style="transition-delay: 0.4s;" style="grid-column: span 2;">
                     <div class="why-join-icon"><i class="fas fa-shield-alt"></i></div>
                     <div class="why-join-info">
-                        <h4>Safe and ethical programs</h4>
-                        <p>Our programs are built on strict safety assessments, child safety policies, and an ethical commitment to the host communities.</p>
+                        <h4 data-i18n="services.join.card5.title">Safe and ethical programs</h4>
+                        <p data-i18n="services.join.card5.desc">Our programs are built on strict safety assessments, child safety policies, and an ethical commitment to the host communities.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Sub-section: Application Form -->
             <div class="text-center reveal" style="text-align: center; margin-top: var(--spacing-lg); margin-bottom: var(--spacing-lg);" id="apply-volunteer">
-                <span class="eyebrow" style="color: var(--color-accent);">Take Action</span>
-                <h2 class="section-title" style="color: white;">Apply Now</h2>
-                <p class="section-subtitle" style="color: rgba(255,255,255,0.8); margin: 0 auto;">Fill out the form below to begin your journey of purpose and discovery.</p>
+                <span class="eyebrow" style="color: var(--color-accent);" data-i18n="services.apply.eyebrow">Take Action</span>
+                <h2 class="section-title" style="color: white;" data-i18n="services.apply.title">Apply Now</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.8); margin: 0 auto;" data-i18n="services.apply.subtitle">Fill out the form below to begin your journey of purpose and discovery.</p>
             </div>
 
-            <form class="application-form reveal">
+            <form name="program-application" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="application-form reveal">
+                <input type="hidden" name="form-name" value="program-application">
+                <p style="display:none;"><label>Don’t fill this out if you're human: <input name="bot-field"></label></p>
                 <div class="form-grid">
                     <div class="form-group">
-                        <label for="vol-name">Full Name</label>
-                        <input type="text" id="vol-name" name="vol-name" placeholder="Enter your full name" required>
+                        <label for="vol-name" data-i18n="services.apply.name">Full Name</label>
+                        <input type="text" id="vol-name" name="vol-name" placeholder="Enter your full name" data-i18n-placeholder="services.apply.name.placeholder" required>
                     </div>
                     <div class="form-group">
-                        <label for="vol-email">Email</label>
-                        <input type="email" id="vol-email" name="vol-email" placeholder="your@email.com" required>
+                        <label for="vol-email" data-i18n="services.apply.email">Email</label>
+                        <input type="email" id="vol-email" name="vol-email" placeholder="your@email.com" data-i18n-placeholder="services.apply.email.placeholder" required>
                     </div>
                     <div class="form-group">
-                        <label for="vol-country">Country</label>
-                        <input type="text" id="vol-country" name="vol-country" placeholder="Your current country" required>
+                        <label for="vol-country" data-i18n="services.apply.country">Country</label>
+                        <input type="text" id="vol-country" name="vol-country" placeholder="Your current country" data-i18n-placeholder="services.apply.country.placeholder" required>
                     </div>
                     <div class="form-group">
-                        <label for="vol-org">Organization / University</label>
-                        <input type="text" id="vol-org" name="vol-org" placeholder="e.g. Harvard University, Company Name">
+                        <label for="vol-org" data-i18n="services.apply.org">Organization / University</label>
+                        <input type="text" id="vol-org" name="vol-org" placeholder="e.g. Harvard University, Company Name" data-i18n-placeholder="services.apply.org.placeholder">
                     </div>
                     <div class="form-group">
-                        <label for="vol-program">Program of Interest</label>
+                        <label for="vol-program" data-i18n="services.apply.program">Program of Interest</label>
                         <select id="vol-program" name="vol-program" required>
-                            <option value="" disabled selected>Select a program</option>
-                            <option value="education">Education</option>
-                            <option value="healthcare">Healthcare</option>
-                            <option value="community_development">Community Development</option>
-                            <option value="youth_women_empowerment">Youth & Women Empowerment</option>
-                            <option value="environmental_conservation">Environmental Conservation</option>
-                            <option value="academic_research">Academic Research</option>
+                            <option value="" disabled selected data-i18n="services.apply.program.select">Select a program</option>
+                            <option value="education" data-i18n="services.apply.program.option1">Education</option>
+                            <option value="healthcare" data-i18n="services.apply.program.option2">Healthcare</option>
+                            <option value="community_development" data-i18n="services.apply.program.option3">Community Development</option>
+                            <option value="youth_women_empowerment" data-i18n="services.apply.program.option4">Youth &amp; Women Empowerment</option>
+                            <option value="environmental_conservation" data-i18n="services.apply.program.option5">Environmental Conservation</option>
+                            <option value="academic_research" data-i18n="services.apply.program.option6">Academic Research</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="vol-dates">Preferred Dates</label>
-                        <input type="text" id="vol-dates" name="vol-dates" placeholder="e.g. Sept - Dec 2026, 4 weeks" required>
+                        <label for="vol-dates" data-i18n="services.apply.dates">Preferred Dates</label>
+                        <input type="text" id="vol-dates" name="vol-dates" placeholder="e.g. Sept - Dec 2026, 4 weeks" data-i18n-placeholder="services.apply.dates.placeholder" required>
                     </div>
                     <div class="form-group">
-                        <label for="vol-participants">Number of Participants</label>
-                        <input type="number" id="vol-participants" name="vol-participants" min="1" placeholder="e.g. 1" required>
+                        <label for="vol-participants" data-i18n="services.apply.participants">Number of Participants</label>
+                        <input type="number" id="vol-participants" name="vol-participants" min="1" placeholder="e.g. 1" data-i18n-placeholder="services.apply.participants.placeholder" required>
                     </div>
                     <div class="form-group full-width">
-                        <label for="vol-message">Message</label>
-                        <textarea id="vol-message" name="vol-message" rows="4" placeholder="Tell us about your background, skills, and why you want to join our programs..."></textarea>
+                        <label for="vol-message" data-i18n="services.apply.message">Message</label>
+                        <textarea id="vol-message" name="vol-message" rows="4" placeholder="Tell us about your background, skills, and why you want to join our programs..." data-i18n-placeholder="services.apply.message.placeholder"></textarea>
                     </div>
                 </div>
                 <div style="text-align: center; margin-top: 2rem;">
-                    <button type="submit" class="btn btn-accent" style="min-width: 200px;">Apply Now</button>
+                    <button type="submit" class="btn btn-accent" style="min-width: 200px;" data-i18n="services.apply.submit">Apply Now</button>
                 </div>
             </form>
 
@@ -956,7 +937,7 @@
                     <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
                         <img src="images/logo.png" alt="Abroad Safaris Logo" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid var(--color-accent);">
                         <div>
-                            <h3 style="color: var(--color-accent); margin: 0; font-size: 1.25rem;">Abroad Safaris LTD</h3>
+                            <h3 style="color: var(--color-accent); margin: 0; font-size: 1.25rem;">Abroad Safaris</h3>
                             <span style="font-size: 0.65rem; letter-spacing: 2px; color: rgba(255,255,255,0.5);">EAST AFRICA SPECIALISTS</span>
                         </div>
                     </div>
@@ -968,7 +949,7 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Explore</h4>
+                    <h4 data-i18n="footer.col.explore">Explore</h4>
                     <ul class="footer-links">
                         <li><a href="explore.html#rwanda">Rwanda</a></li>
                         <li><a href="explore.html#kenya">Kenya</a></li>
@@ -977,26 +958,26 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Company</h4>
+                    <h4 data-i18n="footer.col.company">Company</h4>
                     <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="tours.html">Tours & Packages</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html" data-i18n="footer.link.about">About Us</a></li>
+                        <li><a href="tours.html" data-i18n="footer.link.tours">Tours & Packages</a></li>
+                        <li><a href="blog.html" data-i18n="footer.link.blog">Blog</a></li>
+                        <li><a href="contact.html" data-i18n="footer.link.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact</h4>
+                    <h4 data-i18n="footer.col.contact">Contact</h4>
                     <ul class="footer-links">
-                        <li><a href="mailto:abroad.safaris@gmail.com">abroad.safaris@gmail.com</a></li>
+                        <li><a href="contact.html">Start planning with us</a></li>
                         <li><a href="tel:+250782773963">+250 782 773 963</a></li>
-                        <li><a href="https://wa.me/250782773963" target="_blank">WhatsApp us</a></li>
+                        <li><a href="https://wa.me/250782773963" target="_blank" data-i18n="footer.link.whatsapp">WhatsApp us</a></li>
                         <li style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-top: 1rem;">KG 5 Ave, Gasabo District, Kigali, Rwanda</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Abroad Safaris LTD. All rights reserved. Licensed since 2018.</p>
+                <p>&copy; 2025 Abroad Safaris. All rights reserved. Licensed since 2018.</p>
                 <div class="footer-pills">
                     <div class="pill">rw <span>Rwanda</span></div>
                     <div class="pill">ke <span>Kenya</span></div>
@@ -1008,7 +989,9 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="js/main.js"></script>
+    <script src="js/i18n.js" defer></script>
+    <script src="js/inject-header.js" defer></script>
+    <script src="js/main.js" defer></script>
     <script>
         // Custom interactive script for sticky section navigation
         document.addEventListener('DOMContentLoaded', () => {

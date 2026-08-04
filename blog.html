@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog & Stories | Abroad Safaris LTD</title>
+    <title>Blog & Stories | Abroad Safaris</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/variables.css">
@@ -150,36 +150,16 @@
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="container nav">
-            <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Abroad Safaris Logo">
-                Abroad Safaris <span style="color: var(--color-accent);">LTD</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="explore.html">Explore East Africa</a></li>
-                <li><a href="tours.html">Tours & Packages</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="blog.html" class="active">Blog & Travel tips</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-            <div style="display: flex; align-items: center; gap: 1rem;">
-                <a href="contact.html" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.875rem;">Plan Your Trip</a>
-                <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
-            </div>
-        </div>
-    </header>
+    <!-- Header (injected) -->
+    <div id="site-header"></div>
 
     <!-- Page Header -->
     <div class="page-header">
-        <img src="images/tanzania-selous game reserve.jpg.jpg" alt="Selous Game Reserve" class="page-header-bg">
+        <img src="images/tanzania-serengeti NP.jpg" alt="Serengeti National Park" class="page-header-bg">
         <div class="container reveal">
-            <span class="eyebrow" style="color: var(--color-accent); margin-bottom: 1rem; display: block; letter-spacing: 2px;">Bush Stories & Guides</span>
-            <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); color: white; margin-bottom: 1rem;">Tales from the Bush</h1>
-            <p style="opacity: 0.8; max-width: 600px; margin: 0 auto;">Safari tips, conservation news, and stories from our guides in the field.</p>
+            <span class="eyebrow" style="color: var(--color-accent); margin-bottom: 1rem; display: block; letter-spacing: 2px;" data-i18n="blog.hero.eyebrow">Bush Stories &amp; Guides</span>
+            <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); color: white; margin-bottom: 1rem;" data-i18n="blog.hero.title">Tales from the Bush</h1>
+            <p style="opacity: 0.8; max-width: 600px; margin: 0 auto;" data-i18n="blog.hero.subtitle">Safari tips, conservation news, and stories from our guides in the field.</p>
         </div>
     </div>
 
@@ -195,14 +175,14 @@
                         <img src="images/rwanda-akagera.jpg.jpg" alt="Leopard in tree">
                     </div>
                     <div class="blog-content">
-                        <span class="blog-category">Wildlife Guides</span>
-                        <h2 class="blog-title">The Ultimate Guide to Spotting the Big Five</h2>
-                        <p class="blog-excerpt">Tracking down Africa's most iconic animals requires patience, a good guide, and knowing exactly where and when to look. Here's our comprehensive guide to finding the Big Five across East Africa.</p>
+                        <span class="blog-category" data-i18n="blog.featured.category">Wildlife Guides</span>
+                        <h2 class="blog-title" data-i18n="blog.featured.title">The Ultimate Guide to Spotting the Big Five</h2>
+                        <p class="blog-excerpt" data-i18n="blog.featured.excerpt">Tracking down Africa's most iconic animals requires patience, a good guide, and knowing exactly where and when to look. Here's our comprehensive guide to finding the Big Five across East Africa.</p>
                         <div class="blog-meta">
                             <div class="blog-author">
-                                <span>By Emmanuel O.</span>
+                                <span data-i18n="blog.featured.author">By Emmanuel O.</span>
                             </div>
-                            <span>April 12, 2026</span>
+                            <span data-i18n="blog.featured.date">April 12, 2026</span>
                         </div>
                     </div>
                 </div>
@@ -213,14 +193,14 @@
                         <img src="images/rwanda-volcanoes.jpg.jpg" alt="Gorilla">
                     </div>
                     <div class="blog-content">
-                        <span class="blog-category">Travel Tips</span>
-                        <h3 class="blog-title">What to Pack for Gorilla Trekking</h3>
-                        <p class="blog-excerpt">From waterproof hiking boots to the right kind of garden gloves, ensure you're fully prepared for the misty slopes of Volcanoes National Park.</p>
+                        <span class="blog-category" data-i18n="blog.post1.category">Travel Tips</span>
+                        <h3 class="blog-title" data-i18n="blog.post1.title">What to Pack for Gorilla Trekking</h3>
+                        <p class="blog-excerpt" data-i18n="blog.post1.excerpt">From waterproof hiking boots to the right kind of garden gloves, ensure you're fully prepared for the misty slopes of Volcanoes National Park.</p>
                         <div class="blog-meta">
                             <div class="blog-author">
-                                <span>By David M.</span>
+                                <span data-i18n="blog.post1.author">By David M.</span>
                             </div>
-                            <span>March 28, 2026</span>
+                            <span data-i18n="blog.post1.date">March 28, 2026</span>
                         </div>
                     </div>
                 </div>
@@ -230,14 +210,14 @@
                         <img src="images/rwanda-kingspalace.jpg.jpg" alt="Wildebeest Migration">
                     </div>
                     <div class="blog-content">
-                        <span class="blog-category">Destinations</span>
-                        <h3 class="blog-title">Timing the Great Migration</h3>
-                        <p class="blog-excerpt">The Great Wildebeest Migration is a fluid, year-round journey. We break down the best months to visit the Serengeti and Masai Mara.</p>
+                        <span class="blog-category" data-i18n="blog.post2.category">Destinations</span>
+                        <h3 class="blog-title" data-i18n="blog.post2.title">Timing the Great Migration</h3>
+                        <p class="blog-excerpt" data-i18n="blog.post2.excerpt">The Great Wildebeest Migration is a fluid, year-round journey. We break down the best months to visit the Serengeti and Masai Mara.</p>
                         <div class="blog-meta">
                             <div class="blog-author">
-                                <span>By Sarah K.</span>
+                                <span data-i18n="blog.post2.author">By Sarah K.</span>
                             </div>
-                            <span>March 15, 2026</span>
+                            <span data-i18n="blog.post2.date">March 15, 2026</span>
                         </div>
                     </div>
                 </div>
@@ -247,14 +227,14 @@
                         <img src="images/rwanda-ethnographic.jpg.jpg" alt="Local Community">
                     </div>
                     <div class="blog-content">
-                        <span class="blog-category">Conservation</span>
-                        <h3 class="blog-title">How Tourism Supports Local Communities</h3>
-                        <p class="blog-excerpt">A deep dive into our community partnerships and how your safari booking directly contributes to education and healthcare in rural East Africa.</p>
+                        <span class="blog-category" data-i18n="blog.post3.category">Conservation</span>
+                        <h3 class="blog-title" data-i18n="blog.post3.title">How Tourism Supports Local Communities</h3>
+                        <p class="blog-excerpt" data-i18n="blog.post3.excerpt">A deep dive into our community partnerships and how your safari booking directly contributes to education and healthcare in rural East Africa.</p>
                         <div class="blog-meta">
                             <div class="blog-author">
-                                <span>By Editorial Team</span>
+                                <span data-i18n="blog.post3.author">By Editorial Team</span>
                             </div>
-                            <span>Feb 22, 2026</span>
+                            <span data-i18n="blog.post3.date">Feb 22, 2026</span>
                         </div>
                     </div>
                 </div>
@@ -266,51 +246,51 @@
                 <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: var(--color-accent); border-radius: 50%; opacity: 0.1;"></div>
                 <div style="position: relative; z-index: 1;">
                     <div style="text-align: center; margin-bottom: 3rem;">
-                        <span class="eyebrow" style="color: var(--color-accent);">Essential Guide</span>
-                        <h2 style="color: white; margin-bottom: 1rem;">10 Things to Know Before Your Safari</h2>
-                        <p style="opacity: 0.8; max-width: 600px; margin: 0 auto;">Preparation is key to an unforgettable African adventure. Here are our top expert tips.</p>
+                        <span class="eyebrow" style="color: var(--color-accent);" data-i18n="blog.guide.eyebrow">Essential Guide</span>
+                        <h2 style="color: white; margin-bottom: 1rem;" data-i18n="blog.guide.title">10 Things to Know Before Your Safari</h2>
+                        <p style="opacity: 0.8; max-width: 600px; margin: 0 auto;" data-i18n="blog.guide.subtitle">Preparation is key to an unforgettable African adventure. Here are our top expert tips.</p>
                     </div>
                     
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
                         <div style="display: flex; gap: 1rem;">
                             <div style="font-size: 1.5rem; color: var(--color-accent); font-weight: 700;">01</div>
-                            <p style="font-size: 0.9rem; opacity: 0.9;"><strong>Pack Light:</strong> Soft-sided bags are essential for small bush planes and safari vehicles.</p>
+                            <p style="font-size: 0.9rem; opacity: 0.9;" data-i18n="blog.guide.item1"><strong>Pack Light:</strong> Soft-sided bags are essential for small bush planes and safari vehicles.</p>
                         </div>
                         <div style="display: flex; gap: 1rem;">
                             <div style="font-size: 1.5rem; color: var(--color-accent); font-weight: 700;">02</div>
-                            <p style="font-size: 0.9rem; opacity: 0.9;"><strong>Neutral Colors:</strong> Khaki, olive, and tan help you blend in and don't attract tsetse flies.</p>
+                            <p style="font-size: 0.9rem; opacity: 0.9;" data-i18n="blog.guide.item2"><strong>Neutral Colors:</strong> Khaki, olive, and tan help you blend in and don't attract tsetse flies.</p>
                         </div>
                         <div style="display: flex; gap: 1rem;">
                             <div style="font-size: 1.5rem; color: var(--color-accent); font-weight: 700;">03</div>
-                            <p style="font-size: 0.9rem; opacity: 0.9;"><strong>Tipping Culture:</strong> Small tips go a long way for guides and camp staff; ask us for a guide.</p>
+                            <p style="font-size: 0.9rem; opacity: 0.9;" data-i18n="blog.guide.item3"><strong>Tipping Culture:</strong> Small tips go a long way for guides and camp staff; ask us for a guide.</p>
                         </div>
                         <div style="display: flex; gap: 1rem;">
                             <div style="font-size: 1.5rem; color: var(--color-accent); font-weight: 700;">04</div>
-                            <p style="font-size: 0.9rem; opacity: 0.9;"><strong>Early Starts:</strong> Wildlife is most active at dawn. Be ready for early morning wake-up calls.</p>
+                            <p style="font-size: 0.9rem; opacity: 0.9;" data-i18n="blog.guide.item4"><strong>Early Starts:</strong> Wildlife is most active at dawn. Be ready for early morning wake-up calls.</p>
                         </div>
                         <div style="display: flex; gap: 1rem;">
                             <div style="font-size: 1.5rem; color: var(--color-accent); font-weight: 700;">05</div>
-                            <p style="font-size: 0.9rem; opacity: 0.9;"><strong>Hydration:</strong> Drink plenty of water. Most lodges provide filtered or bottled water.</p>
+                            <p style="font-size: 0.9rem; opacity: 0.9;" data-i18n="blog.guide.item5"><strong>Hydration:</strong> Drink plenty of water. Most lodges provide filtered or bottled water.</p>
                         </div>
                         <div style="display: flex; gap: 1rem;">
                             <div style="font-size: 1.5rem; color: var(--color-accent); font-weight: 700;">06</div>
-                            <p style="font-size: 0.9rem; opacity: 0.9;"><strong>Patience:</strong> Nature doesn't have a schedule. Some of the best sightings come to those who wait.</p>
+                            <p style="font-size: 0.9rem; opacity: 0.9;" data-i18n="blog.guide.item6"><strong>Patience:</strong> Nature doesn't have a schedule. Some of the best sightings come to those who wait.</p>
                         </div>
                         <div style="display: flex; gap: 1rem;">
                             <div style="font-size: 1.5rem; color: var(--color-accent); font-weight: 700;">07</div>
-                            <p style="font-size: 0.9rem; opacity: 0.9;"><strong>Respect Boundaries:</strong> Always follow your guide's instructions regarding distance from wildlife.</p>
+                            <p style="font-size: 0.9rem; opacity: 0.9;" data-i18n="blog.guide.item7"><strong>Respect Boundaries:</strong> Always follow your guide's instructions regarding distance from wildlife.</p>
                         </div>
                         <div style="display: flex; gap: 1rem;">
                             <div style="font-size: 1.5rem; color: var(--color-accent); font-weight: 700;">08</div>
-                            <p style="font-size: 0.9rem; opacity: 0.9;"><strong>Power Banks:</strong> Charging spots can be limited in remote camps; bring a portable power bank.</p>
+                            <p style="font-size: 0.9rem; opacity: 0.9;" data-i18n="blog.guide.item8"><strong>Power Banks:</strong> Charging spots can be limited in remote camps; bring a portable power bank.</p>
                         </div>
                         <div style="display: flex; gap: 1rem;">
                             <div style="font-size: 1.5rem; color: var(--color-accent); font-weight: 700;">09</div>
-                            <p style="font-size: 0.9rem; opacity: 0.9;"><strong>Local Phrases:</strong> Learning a few Swahili or Kinyarwanda words builds great rapport.</p>
+                            <p style="font-size: 0.9rem; opacity: 0.9;" data-i18n="blog.guide.item9"><strong>Local Phrases:</strong> Learning a few Swahili or Kinyarwanda words builds great rapport.</p>
                         </div>
                         <div style="display: flex; gap: 1rem;">
                             <div style="font-size: 1.5rem; color: var(--color-accent); font-weight: 700;">10</div>
-                            <p style="font-size: 0.9rem; opacity: 0.9;"><strong>Unplug:</strong> While many lodges have Wi-Fi, take time to fully immerse in the sounds of the bush.</p>
+                            <p style="font-size: 0.9rem; opacity: 0.9;" data-i18n="blog.guide.item10"><strong>Unplug:</strong> While many lodges have Wi-Fi, take time to fully immerse in the sounds of the bush.</p>
                         </div>
                     </div>
                 </div>
@@ -327,7 +307,7 @@
                     <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
                         <img src="images/logo.png" alt="Abroad Safaris Logo" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid var(--color-accent);">
                         <div>
-                            <h3 style="color: var(--color-accent); margin: 0; font-size: 1.25rem;">Abroad Safaris LTD</h3>
+                            <h3 style="color: var(--color-accent); margin: 0; font-size: 1.25rem;">Abroad Safaris</h3>
                             <span style="font-size: 0.65rem; letter-spacing: 2px; color: rgba(255,255,255,0.5);">EAST AFRICA SPECIALISTS</span>
                         </div>
                     </div>
@@ -339,7 +319,7 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Explore</h4>
+                    <h4 data-i18n="footer.col.explore">Explore</h4>
                     <ul class="footer-links">
                         <li><a href="explore.html#rwanda">Rwanda</a></li>
                         <li><a href="explore.html#kenya">Kenya</a></li>
@@ -348,26 +328,26 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Company</h4>
+                    <h4 data-i18n="footer.col.company">Company</h4>
                     <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="tours.html">Tours & Packages</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html" data-i18n="footer.link.about">About Us</a></li>
+                        <li><a href="tours.html" data-i18n="footer.link.tours">Tours & Packages</a></li>
+                        <li><a href="blog.html" data-i18n="footer.link.blog">Blog</a></li>
+                        <li><a href="contact.html" data-i18n="footer.link.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact</h4>
+                    <h4 data-i18n="footer.col.contact">Contact</h4>
                     <ul class="footer-links">
                         <li><a href="mailto:abroad.safaris@gmail.com">abroad.safaris@gmail.com</a></li>
                         <li><a href="tel:+250782773963">+250 782 773 963</a></li>
-                        <li><a href="https://wa.me/250782773963" target="_blank">WhatsApp us</a></li>
+                        <li><a href="https://wa.me/250782773963" target="_blank" data-i18n="footer.link.whatsapp">WhatsApp us</a></li>
                         <li style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-top: 1rem;">KG 5 Ave, Gasabo District, Kigali, Rwanda</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Abroad Safaris LTD. All rights reserved. Licensed since 2018.</p>
+                <p>&copy; 2025 Abroad Safaris. All rights reserved. Licensed since 2018.</p>
                 <div class="footer-pills">
                     <div class="pill">rw <span>Rwanda</span></div>
                     <div class="pill">ke <span>Kenya</span></div>
@@ -378,6 +358,8 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/i18n.js" defer></script>
+    <script src="js/inject-header.js" defer></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

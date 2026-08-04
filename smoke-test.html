@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Smoke Test — Abroad Safaris</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <style>
+    body { padding: 3rem; font-family: var(--font-body); background: var(--color-neutral-100); }
+    .card { background: white; padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow-sm); max-width: 900px; margin: 0 auto 1.25rem; }
+    h1 { margin-bottom: .5rem; }
+    .row { display:flex; gap:1rem; flex-wrap:wrap; }
+    .btn { text-decoration:none; }
+    pre { background:#111; color:#fff; padding:1rem; border-radius:8px; overflow:auto }
+  </style>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <div class="card">
+      <h1>Smoke Test</h1>
+      <p>Quick checks for header injection, sub-nav scrolling, fleet placeholders, and form presence.</p>
+      <div class="row" style="margin-top:1rem;">
+        <a class="btn btn-accent" href="index.html">Open Home</a>
+        <a class="btn btn-outline" href="services.html#transport-services">Open Services → Transport</a>
+        <a class="btn btn-outline" href="services.html#volunteer-programs">Open Services → Programs</a>
+        <a class="btn btn-outline" href="research-volunteer.html#apply">Open Research/Volunteer Apply</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Forms Present</h2>
+      <ul>
+        <li>Transport Quote form on <a href="services.html#transport-quote">`services.html#transport-quote`</a></li>
+        <li>Program Application form on <a href="services.html#apply-volunteer">`services.html#apply-volunteer`</a> and <a href="research-volunteer.html#apply">`research-volunteer.html#apply`</a></li>
+      </ul>
+      <p>Open those links and submit (Netlify capture when deployed). Local submission shows the button UI state.</p>
+    </div>
+
+    <div class="card">
+      <h2>Fleet & Partners</h2>
+      <div class="row">
+        <div style="flex:1; min-width:260px;">
+          <h4>Toyota Land Cruiser (placeholder)</h4>
+          <img src="images/v8-transport.jpg" alt="Toyota Land Cruiser V8" style="width:100%; border-radius:8px;">
+        </div>
+        <div style="flex:1; min-width:260px;">
+          <h4>Partner sample</h4>
+          <img src="images/partner-volcano-arts.svg" alt="partner" style="width:100%; border-radius:8px;">
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Quick Diagnostics</h2>
+      <p>Open browser console to check that `inject-header.js` ran and `main.js` loaded without errors. Look for:</p>
+      <pre>document.getElementById('site-header') !== null
+window.console.logs from js/main.js (reveal observer, form submit UX)</pre>
+    </div>
+
+    <div class="card">
+      <h2>Notes</h2>
+      <p>This page is a local smoke test — deploy the site to Netlify to verify forms are captured. Use the links above to test anchors, header, and forms quickly.</p>
+    </div>
+  </main>
+
+  <script src="js/inject-header.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

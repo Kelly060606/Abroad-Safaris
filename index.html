@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abroad Safaris LTD | Premium East Africa Safari Specialists</title>
+    <title>Abroad Safaris | Premium East Africa Safari Specialists</title>
     <meta name="description" content="A Kigali-based safari company rooted in sustainability, authenticity and deep respect for the land, wildlife, and communities we encounter.">
     
     <!-- Fonts and Icons -->
@@ -264,28 +264,8 @@
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="container nav">
-            <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Abroad Safaris Logo">
-                Abroad Safaris <span style="color: var(--color-accent);">LTD</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="explore.html">Explore East Africa</a></li>
-                <li><a href="tours.html">Tours & Packages</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="blog.html">Blog & Travel tips</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-            <div style="display: flex; align-items: center; gap: 1rem;">
-                <a href="contact.html" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.875rem;">Plan Your Trip</a>
-                <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
-            </div>
-        </div>
-    </header>
+    <!-- Header (injected) -->
+    <div id="site-header"></div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -294,14 +274,14 @@
         </video>
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <span class="eyebrow reveal">Rwanda-born · East Africa–wide</span>
-            <h1 class="reveal" style="transition-delay: 0.1s;">Where the wild <br> calls you <span>home</span></h1>
-            <p class="hero-subtitle reveal" style="transition-delay: 0.2s;">
+            <span class="eyebrow reveal" data-i18n="index.hero.eyebrow">Rwanda-born · East Africa–wide</span>
+            <h1 class="reveal" style="transition-delay: 0.1s;" data-i18n="index.hero.h1">Where the wild <br>calls you <span>home</span></h1>
+            <p class="hero-subtitle reveal" style="transition-delay: 0.2s;" data-i18n="index.hero.subtitle">
                 A Kigali-based safari company rooted in sustainability, authenticity and deep respect for the land, wildlife, and communities we encounter.
             </p>
             <div class="hero-btns reveal" style="transition-delay: 0.3s;">
-                <a href="tours.html" class="btn btn-accent">Explore Packages</a>
-                <a href="contact.html" class="btn btn-outline" style="color: white; border-color: rgba(255,255,255,0.4);">Tailor My Safari</a>
+                <a href="tours.html" class="btn btn-accent" data-i18n="index.hero.btn1">Explore Packages</a>
+                <a href="contact.html" class="btn btn-outline" style="color: white; border-color: rgba(255,255,255,0.4);" data-i18n="index.hero.btn2">Tailor My Safari</a>
             </div>
         </div>
     </section>
@@ -312,19 +292,19 @@
             <div class="stats-grid">
                 <div class="stat-item">
                     <div class="stat-num">7+</div>
-                    <div class="stat-label">Years Experience</div>
+                    <div class="stat-label" data-i18n="index.stats.years">Years Experience</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-num">4</div>
-                    <div class="stat-label">East African Countries</div>
+                    <div class="stat-label" data-i18n="index.stats.countries">East African Countries</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-num">200+</div>
-                    <div class="stat-label">Happy Travellers</div>
+                    <div class="stat-label" data-i18n="index.stats.travellers">Happy Travellers</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-num">5★</div>
-                    <div class="stat-label">Average Rating</div>
+                    <div class="stat-label" data-i18n="index.stats.rating">Average Rating</div>
                 </div>
             </div>
         </div>
@@ -334,9 +314,9 @@
     <section class="section" style="padding-top: 0;">
         <div class="container">
             <div class="text-center reveal" style="text-align: center;">
-                <span class="eyebrow" style="color: var(--color-primary);">Destinations</span>
-                <h2 class="section-title">Where will your story unfold?</h2>
-                <p class="section-subtitle" style="margin: 0 auto;">From Rwanda's gorilla forests to Tanzania's endless golden plains.</p>
+                <span class="eyebrow" style="color: var(--color-primary);" data-i18n="index.dest.eyebrow">Destinations</span>
+                <h2 class="section-title" data-i18n="index.dest.title">Where will your story unfold?</h2>
+                <p class="section-subtitle" style="margin: 0 auto;" data-i18n="index.dest.subtitle">From Rwanda's gorilla forests to Tanzania's endless golden plains.</p>
             </div>
 
             <div class="destinations-grid">
@@ -345,7 +325,7 @@
                     <div class="dest-overlay">
                         <div class="dest-flag">🇷🇼</div>
                         <h3 class="dest-title">Rwanda</h3>
-                        <div class="dest-tags">Gorillas • Volcanoes • Lakes</div>
+                        <div class="dest-tags" data-i18n="index.dest.rwanda.tags">Gorillas • Volcanoes • Lakes</div>
                     </div>
                     <div class="dest-arrow"><i class="fas fa-arrow-right"></i></div>
                 </a>
@@ -355,7 +335,7 @@
                     <div class="dest-overlay">
                         <div class="dest-flag">🇰🇪</div>
                         <h3 class="dest-title">Kenya</h3>
-                        <div class="dest-tags">Mara • Migration • Big Five</div>
+                        <div class="dest-tags" data-i18n="index.dest.kenya.tags">Mara • Migration • Big Five</div>
                     </div>
                     <div class="dest-arrow"><i class="fas fa-arrow-right"></i></div>
                 </a>
@@ -365,7 +345,7 @@
                     <div class="dest-overlay">
                         <div class="dest-flag">🇹🇿</div>
                         <h3 class="dest-title">Tanzania</h3>
-                        <div class="dest-tags">Serengeti • Zanzibar • Kilimanjaro</div>
+                        <div class="dest-tags" data-i18n="index.dest.tanzania.tags">Serengeti • Zanzibar • Kilimanjaro</div>
                     </div>
                     <div class="dest-arrow"><i class="fas fa-arrow-right"></i></div>
                 </a>
@@ -375,14 +355,14 @@
                     <div class="dest-overlay">
                         <div class="dest-flag">🇺🇬</div>
                         <h3 class="dest-title">Uganda</h3>
-                        <div class="dest-tags">Bwindi • Queen Elizabeth • Nile</div>
+                        <div class="dest-tags" data-i18n="index.dest.uganda.tags">Bwindi • Queen Elizabeth • Nile</div>
                     </div>
                     <div class="dest-arrow"><i class="fas fa-arrow-right"></i></div>
                 </a>
             </div>
             
             <div style="text-align: center; margin-top: 3rem;" class="reveal">
-                <a href="explore.html" class="btn btn-outline">View All Destinations <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i></a>
+                <a href="explore.html" class="btn btn-outline" data-i18n="index.dest.viewall">View All Destinations <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i></a>
             </div>
         </div>
     </section>
@@ -392,39 +372,40 @@
         <div class="container">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-xl); align-items: center;">
                 <div class="reveal">
-                    <span class="eyebrow" style="color: var(--color-primary);">Why Travel With Us</span>
-                    <h2 class="section-title">Beyond the lens, <br>into the <span>heart</span> of Africa</h2>
-                    <p class="section-subtitle" style="margin-bottom: 2rem;">We don't just show you landscapes; we connect you with the soul of East Africa through authentic encounters and sustainable practices.</p>
+                    <span class="eyebrow" style="color: var(--color-primary);" data-i18n="index.why.eyebrow">Why Travel With Us</span>
+                    <h2 class="section-title" data-i18n="index.why.title">Beyond the lens, <br>into the <span>heart</span> of Africa</h2>
+                    <p class="section-subtitle" style="margin-bottom: 2rem;" data-i18n="index.why.subtitle">We don't just show you landscapes; we connect you with the soul of East Africa through authentic encounters and sustainable practices.</p>
                     
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
-                            <div style="flex-shrink: 0; width: 40px; height: 40px; background: rgba(160, 82, 45, 0.1); color: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div>
-                                <h4 style="margin-bottom: 0.25rem;">Community & Culture</h4>
-                                <p style="font-size: 0.9rem; opacity: 0.8;">A cornerstone of our journeys is visiting local communities. We facilitate genuine interactions where you can explore their rich culture and participate in daily activities, ensuring your visit directly benefits those we encounter.</p>
-                            </div>
-                        </li>
-                        <li style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
-                            <div style="flex-shrink: 0; width: 40px; height: 40px; background: rgba(160, 82, 45, 0.1); color: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-map-marked-alt"></i>
-                            </div>
-                            <div>
-                                <h4 style="margin-bottom: 0.25rem;">Local Roots, Global Standards</h4>
-                                <p style="font-size: 0.9rem; opacity: 0.8;">As a Rwanda-born company, our deep local knowledge allows us to unlock hidden trails and exclusive experiences that international operators often miss.</p>
-                            </div>
-                        </li>
-                        <li style="display: flex; gap: 1rem;">
-                            <div style="flex-shrink: 0; width: 40px; height: 40px; background: rgba(160, 82, 45, 0.1); color: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <div>
-                                <h4 style="margin-bottom: 0.25rem;">Purposeful Travel</h4>
-                                <p style="font-size: 0.9rem; opacity: 0.8;">Every safari is rooted in sustainability and deep respect for wildlife. We prioritize eco-conscious lodges and carbon-neutral initiatives.</p>
-                            </div>
-                        </li>
-                    </ul>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--spacing-md);">
+                        <div class="glass-card reveal" style="padding: 1.5rem;">
+                            <h4 style="margin-bottom: 0.5rem;" data-i18n="index.why.item1.title">✓ Experienced Local Experts</h4>
+                            <p style="font-size: 0.95rem; color: var(--color-neutral-800);" data-i18n="index.why.item1.desc">Our knowledgeable local team provides authentic insights and personalised experiences tailored to your interests.</p>
+                        </div>
+                        <div class="glass-card reveal" style="padding: 1.5rem;">
+                            <h4 style="margin-bottom: 0.5rem;" data-i18n="index.why.item2.title">✓ Authentic Cultural Immersion</h4>
+                            <p style="font-size: 0.95rem; color: var(--color-neutral-800);" data-i18n="index.why.item2.desc">Experience traditional dances, games, clothing, and crafts — including Gakondo, Igisoro, Imikenyero, Kitenge, Igiseke and Imigongo art.</p>
+                        </div>
+                        <div class="glass-card reveal" style="padding: 1.5rem;">
+                            <h4 style="margin-bottom: 0.5rem;" data-i18n="index.why.item3.title">✓ Community-Based Tourism</h4>
+                            <p style="font-size: 0.95rem; color: var(--color-neutral-800);" data-i18n="index.why.item3.desc">Approximately 30% of eligible tourism proceeds are reinvested into local communities to support sustainable development and livelihoods.</p>
+                        </div>
+                        <div class="glass-card reveal" style="padding: 1.5rem;">
+                            <h4 style="margin-bottom: 0.5rem;" data-i18n="index.why.item4.title">✓ Multilingual Professional Guides</h4>
+                            <p style="font-size: 0.95rem; color: var(--color-neutral-800);" data-i18n="index.why.item4.desc">Our experienced tour guides are fluent in English and French, ensuring smooth communication for international visitors.</p>
+                        </div>
+                        <div class="glass-card reveal" style="padding: 1.5rem;">
+                            <h4 style="margin-bottom: 0.5rem;" data-i18n="index.why.item5.title">✓ Personalized Travel Experiences</h4>
+                            <p style="font-size: 0.95rem; color: var(--color-neutral-800);" data-i18n="index.why.item5.desc">Every itinerary is customised according to each guest's interests and travel preferences for a truly personal journey.</p>
+                        </div>
+                        <div class="glass-card reveal" style="padding: 1.5rem;">
+                            <h4 style="margin-bottom: 0.5rem;" data-i18n="index.why.item6.title">✓ Trusted Local Partnerships</h4>
+                            <p style="font-size: 0.95rem; color: var(--color-neutral-800);" data-i18n="index.why.item6.desc">We work with Volcano Arts Center, Hospes, schools, universities, cultural groups and conservation partners to create authentic experiences.</p>
+                        </div>
+                        <div class="glass-card reveal" style="padding: 1.5rem;">
+                            <h4 style="margin-bottom: 0.5rem;" data-i18n="index.why.item7.title">✓ Safe, Reliable & Comfortable Travel</h4>
+                            <p style="font-size: 0.95rem; color: var(--color-neutral-800);" data-i18n="index.why.item7.desc">Our professional team is committed to safe, reliable, and memorable journeys from arrival to departure.</p>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="reveal" style="position: relative; transition-delay: 0.2s;">
@@ -434,8 +415,8 @@
                             <source src="images/community-culture.mp4" type="video/mp4">
                         </video>
                         <div style="position: absolute; bottom: 20px; left: 20px; right: 20px; background: rgba(255,255,255,0.9); padding: 1rem; border-radius: var(--border-radius); backdrop-filter: blur(5px);">
-                            <p style="font-size: 0.8rem; font-weight: 600; color: var(--color-primary-dark); margin: 0;">Immersive Cultural Experiences</p>
-                            <p style="font-size: 0.75rem; margin: 0; opacity: 0.7;">Directly supporting local families through tourism.</p>
+                            <p style="font-size: 0.8rem; font-weight: 600; color: var(--color-primary-dark); margin: 0;" data-i18n="index.why.video.title">Immersive Cultural Experiences</p>
+                            <p style="font-size: 0.75rem; margin: 0; opacity: 0.7;" data-i18n="index.why.video.desc">Directly supporting local families through tourism.</p>
                         </div>
                     </div>
                 </div>
@@ -447,8 +428,8 @@
     <section class="section" style="background-color: var(--color-neutral-100);">
         <div class="container">
             <div class="text-center reveal" style="text-align: center; margin-bottom: var(--spacing-lg);">
-                <span class="eyebrow" style="color: var(--color-accent);">Our Philosophy</span>
-                <h2 class="section-title">What guides every journey</h2>
+                <span class="eyebrow" style="color: var(--color-accent);" data-i18n="index.values.eyebrow">Our Philosophy</span>
+                <h2 class="section-title" data-i18n="index.values.title">What guides every journey</h2>
             </div>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-md);">
@@ -456,33 +437,115 @@
                     <div style="width: 50px; height: 50px; background: rgba(31, 77, 58, 0.1); color: var(--color-primary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1rem;">
                         <i class="fas fa-leaf"></i>
                     </div>
-                    <h4 style="margin-bottom: 0.5rem; font-size: 1.25rem;">Sustainability</h4>
-                    <p style="font-size: 0.875rem; color: var(--color-neutral-800);">Eco-conscious choices, minimal footprint, and active investment in conservation.</p>
+                    <h4 style="margin-bottom: 0.5rem; font-size: 1.25rem;" data-i18n="index.values.item1.title">Sustainability</h4>
+                    <p style="font-size: 0.875rem; color: var(--color-neutral-800);" data-i18n="index.values.item1.desc">Eco-conscious choices, minimal footprint, and active investment in conservation.</p>
                 </div>
                 
                 <div class="glass-card reveal" style="background: var(--color-neutral-200); border: none; transition-delay: 0.1s;">
                     <div style="width: 50px; height: 50px; background: rgba(224, 168, 0, 0.1); color: var(--color-accent); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1rem;">
                         <i class="fas fa-compass"></i>
                     </div>
-                    <h4 style="margin-bottom: 0.5rem; font-size: 1.25rem;">Authenticity</h4>
-                    <p style="font-size: 0.875rem; color: var(--color-neutral-800);">Real East Africa — genuine wildlife, honest communities, no scripted performances.</p>
+                    <h4 style="margin-bottom: 0.5rem; font-size: 1.25rem;" data-i18n="index.values.item2.title">Authenticity</h4>
+                    <p style="font-size: 0.875rem; color: var(--color-neutral-800);" data-i18n="index.values.item2.desc">Real East Africa — genuine wildlife, honest communities, no scripted performances.</p>
                 </div>
 
                 <div class="glass-card reveal" style="background: var(--color-neutral-200); border: none; transition-delay: 0.2s;">
                     <div style="width: 50px; height: 50px; background: rgba(139, 94, 60, 0.1); color: #8B5E3C; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1rem;">
                         <i class="fas fa-map-marked-alt"></i>
                     </div>
-                    <h4 style="margin-bottom: 0.5rem; font-size: 1.25rem;">Exploration</h4>
-                    <p style="font-size: 0.875rem; color: var(--color-neutral-800);">Beyond the obvious — hidden trails, off-peak timings, and the paths most tours never find.</p>
+                    <h4 style="margin-bottom: 0.5rem; font-size: 1.25rem;" data-i18n="index.values.item3.title">Exploration</h4>
+                    <p style="font-size: 0.875rem; color: var(--color-neutral-800);" data-i18n="index.values.item3.desc">Beyond the obvious — hidden trails, off-peak timings, and the paths most tours never find.</p>
                 </div>
 
                 <div class="glass-card reveal" style="background: var(--color-neutral-200); border: none; transition-delay: 0.3s;">
                     <div style="width: 50px; height: 50px; background: rgba(0, 0, 0, 0.05); color: var(--color-neutral-900); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1rem;">
                         <i class="fas fa-hands-helping"></i>
                     </div>
-                    <h4 style="margin-bottom: 0.5rem; font-size: 1.25rem;">Respect</h4>
-                    <p style="font-size: 0.875rem; color: var(--color-neutral-800);">For wildlife, culture, and communities — we are guests in these ecosystems.</p>
+                    <h4 style="margin-bottom: 0.5rem; font-size: 1.25rem;" data-i18n="index.values.item4.title">Respect</h4>
+                    <p style="font-size: 0.875rem; color: var(--color-neutral-800);" data-i18n="index.values.item4.desc">For wildlife, culture, and communities — we are guests in these ecosystems.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Travel Packages Section -->
+    <section id="featured-packages" class="section" style="background: linear-gradient(135deg, #0d1f18 0%, #1a3328 50%, #0d1f18 100%); position: relative; overflow: hidden;">
+        <!-- Background decoration -->
+        <div style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(224,168,0,0.08) 0%, transparent 70%); pointer-events: none;"></div>
+        <div style="position: absolute; bottom: -80px; left: -80px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(31,77,58,0.2) 0%, transparent 70%); pointer-events: none;"></div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="text-center reveal" style="text-align: center; margin-bottom: var(--spacing-lg);">
+                <span class="eyebrow" style="color: var(--color-accent);" data-i18n="index.pkgs.eyebrow">Curated Experiences</span>
+                <h2 class="section-title" style="color: white; font-size: clamp(2rem, 4vw, 3rem);" data-i18n="index.pkgs.title">Featured Travel Packages</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.75); margin: 0 auto; max-width: 650px;" data-i18n="index.pkgs.subtitle">Tailored safari experiences for every type of traveller — from families seeking wonder to romantics chasing sunsets and adventurers craving the wild.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: var(--spacing-lg);">
+
+                <!-- Family Package -->
+                <div class="reveal" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 18px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 24px 60px rgba(0,0,0,0.4)'; this.style.borderColor='rgba(224,168,0,0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(255,255,255,0.1)';">
+                    <div style="position: relative; height: 240px; overflow: hidden;">
+                        <img src="images/kenya-amboseli-elephants.jpg" alt="Family Safari Package" style="width:100%; height:100%; object-fit:cover; transition: transform 0.6s ease;" onmouseover="this.style.transform='scale(1.08)';" onmouseout="this.style.transform='scale(1)';">
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,33,25,0.85) 0%, transparent 60%);"></div>
+                        <div style="position: absolute; top: 1.25rem; left: 1.25rem; background: var(--color-accent); color: #0d1f18; font-weight: 700; font-size: 0.75rem; letter-spacing: 1.5px; text-transform: uppercase; padding: 0.35rem 0.85rem; border-radius: 50px;" data-i18n="index.pkgs.family.label">Family</div>
+                        <div style="position: absolute; bottom: 1rem; left: 1.25rem; color: rgba(255,255,255,0.7); font-size: 0.85rem;"><i class="fas fa-clock" style="margin-right: 0.4rem;"></i>Flexible Duration</div>
+                    </div>
+                    <div style="padding: 1.75rem;">
+                        <h3 style="color: white; font-size: 1.5rem; margin-bottom: 0.75rem; font-family: var(--font-heading);" data-i18n="index.pkgs.family.title">Family Safari Package</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.65; margin-bottom: 1.5rem;" data-i18n="index.pkgs.family.desc">Create lifelong memories with your family amid East Africa's most iconic landscapes. Kid-friendly game drives, gentle wildlife encounters, and cultural experiences designed for all ages.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.75rem;">
+                            <span style="background: rgba(31,77,58,0.3); color: rgba(255,255,255,0.8); font-size: 0.75rem; padding: 0.3rem 0.7rem; border-radius: 50px; border: 1px solid rgba(31,77,58,0.5);">🐘 Elephant Encounters</span>
+                            <span style="background: rgba(31,77,58,0.3); color: rgba(255,255,255,0.8); font-size: 0.75rem; padding: 0.3rem 0.7rem; border-radius: 50px; border: 1px solid rgba(31,77,58,0.5);">🏕️ Luxury Camping</span>
+                            <span style="background: rgba(31,77,58,0.3); color: rgba(255,255,255,0.8); font-size: 0.75rem; padding: 0.3rem 0.7rem; border-radius: 50px; border: 1px solid rgba(31,77,58,0.5);">🌍 Cultural Visits</span>
+                        </div>
+                        <a href="tours.html#family-packages" class="btn btn-accent" style="width: 100%; text-align: center; display: block; font-size: 1rem; padding: 0.9rem;" data-i18n="index.pkgs.family.detail">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Romantic Package -->
+                <div class="reveal" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 18px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; transition-delay: 0.1s;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 24px 60px rgba(0,0,0,0.4)'; this.style.borderColor='rgba(224,168,0,0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(255,255,255,0.1)';">
+                    <div style="position: relative; height: 240px; overflow: hidden;">
+                        <img src="images/rwanda-lakekivu.jpg.jpg" alt="Romantic Package" style="width:100%; height:100%; object-fit:cover; transition: transform 0.6s ease;" onmouseover="this.style.transform='scale(1.08)';" onmouseout="this.style.transform='scale(1)';">
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,33,25,0.85) 0%, transparent 60%);"></div>
+                        <div style="position: absolute; top: 1.25rem; left: 1.25rem; background: #c0392b; color: white; font-weight: 700; font-size: 0.75rem; letter-spacing: 1.5px; text-transform: uppercase; padding: 0.35rem 0.85rem; border-radius: 50px;" data-i18n="index.pkgs.romantic.label">Romantic</div>
+                        <div style="position: absolute; bottom: 1rem; left: 1.25rem; color: rgba(255,255,255,0.7); font-size: 0.85rem;"><i class="fas fa-clock" style="margin-right: 0.4rem;"></i>Flexible Duration</div>
+                    </div>
+                    <div style="padding: 1.75rem;">
+                        <h3 style="color: white; font-size: 1.5rem; margin-bottom: 0.75rem; font-family: var(--font-heading);" data-i18n="index.pkgs.romantic.title">Romantic Safari Package</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.65; margin-bottom: 1.5rem;" data-i18n="index.pkgs.romantic.desc">An intimate East African escape crafted for couples. From gorilla trekking at dawn to sundowners over Lake Kivu, every moment is designed to be shared and remembered.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.75rem;">
+                            <span style="background: rgba(31,77,58,0.3); color: rgba(255,255,255,0.8); font-size: 0.75rem; padding: 0.3rem 0.7rem; border-radius: 50px; border: 1px solid rgba(31,77,58,0.5);">🌅 Sunset Cruises</span>
+                            <span style="background: rgba(31,77,58,0.3); color: rgba(255,255,255,0.8); font-size: 0.75rem; padding: 0.3rem 0.7rem; border-radius: 50px; border: 1px solid rgba(31,77,58,0.5);">🦍 Gorilla Trekking</span>
+                            <span style="background: rgba(31,77,58,0.3); color: rgba(255,255,255,0.8); font-size: 0.75rem; padding: 0.3rem 0.7rem; border-radius: 50px; border: 1px solid rgba(31,77,58,0.5);">🏨 Boutique Lodges</span>
+                        </div>
+                        <a href="tours.html#romantic-packages" class="btn btn-accent" style="width: 100%; text-align: center; display: block; font-size: 1rem; padding: 0.9rem;" data-i18n="index.pkgs.romantic.detail">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Adventure Package -->
+                <div class="reveal" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 18px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; transition-delay: 0.2s;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 24px 60px rgba(0,0,0,0.4)'; this.style.borderColor='rgba(224,168,0,0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(255,255,255,0.1)';">
+                    <div style="position: relative; height: 240px; overflow: hidden;">
+                        <img src="images/tanzania-kilimanjaro.jpg" alt="Adventure Package" style="width:100%; height:100%; object-fit:cover; transition: transform 0.6s ease;" onmouseover="this.style.transform='scale(1.08)';" onmouseout="this.style.transform='scale(1)';">
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,33,25,0.85) 0%, transparent 60%);"></div>
+                        <div style="position: absolute; top: 1.25rem; left: 1.25rem; background: #e67e22; color: white; font-weight: 700; font-size: 0.75rem; letter-spacing: 1.5px; text-transform: uppercase; padding: 0.35rem 0.85rem; border-radius: 50px;" data-i18n="index.pkgs.adventure.label">Adventure</div>
+                        <div style="position: absolute; bottom: 1rem; left: 1.25rem; color: rgba(255,255,255,0.7); font-size: 0.85rem;"><i class="fas fa-clock" style="margin-right: 0.4rem;"></i>Flexible Duration</div>
+                    </div>
+                    <div style="padding: 1.75rem;">
+                        <h3 style="color: white; font-size: 1.5rem; margin-bottom: 0.75rem; font-family: var(--font-heading);" data-i18n="index.pkgs.adventure.title">Adventure Safari Package</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.65; margin-bottom: 1.5rem;" data-i18n="index.pkgs.adventure.desc">For the bold and the curious — summit Kilimanjaro, trek through Bwindi, zipline over Nyungwe, or white-water raft on the Nile. East Africa's wildest experiences await.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.75rem;">
+                            <span style="background: rgba(31,77,58,0.3); color: rgba(255,255,255,0.8); font-size: 0.75rem; padding: 0.3rem 0.7rem; border-radius: 50px; border: 1px solid rgba(31,77,58,0.5);">🏔️ Kilimanjaro</span>
+                            <span style="background: rgba(31,77,58,0.3); color: rgba(255,255,255,0.8); font-size: 0.75rem; padding: 0.3rem 0.7rem; border-radius: 50px; border: 1px solid rgba(31,77,58,0.5);">🚵 Trekking</span>
+                            <span style="background: rgba(31,77,58,0.3); color: rgba(255,255,255,0.8); font-size: 0.75rem; padding: 0.3rem 0.7rem; border-radius: 50px; border: 1px solid rgba(31,77,58,0.5);">🌊 White-Water Rafting</span>
+                        </div>
+                        <a href="tours.html#adventure-packages" class="btn btn-accent" style="width: 100%; text-align: center; display: block; font-size: 1rem; padding: 0.9rem;" data-i18n="index.pkgs.adventure.detail">View Details</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;" class="reveal">
+                <a href="tours.html" class="btn" style="background: transparent; border: 1.5px solid rgba(255,255,255,0.3); color: white; font-size: 1rem; padding: 0.9rem 2.5rem; border-radius: 50px; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.borderColor='rgba(255,255,255,0.6)';" onmouseout="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.3)';" data-i18n="index.pkgs.browse">Browse All Packages &nbsp;<i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
@@ -490,9 +553,9 @@
     <!-- CTA Section -->
     <section class="section cta-section">
         <div class="container cta-content reveal">
-            <h2 class="section-title" style="color: white;">Ready for your next adventure?</h2>
-            <p class="section-subtitle" style="color: rgba(255,255,255,0.8); margin: 0 auto var(--spacing-lg);">Let our experts craft a tailor-made safari itinerary just for you, balancing luxury with pure, untamed wilderness.</p>
-            <a href="contact.html" class="btn btn-accent" style="font-size: 1.125rem; padding: 1.2rem 2.5rem;">Start Planning Today</a>
+            <h2 class="section-title" style="color: white;" data-i18n="index.cta.title">Ready for your next adventure?</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.8); margin: 0 auto var(--spacing-lg);" data-i18n="index.cta.subtitle">Let our experts craft a tailor-made safari itinerary just for you, balancing luxury with pure, untamed wilderness.</p>
+            <a href="#featured-packages" class="btn btn-accent" style="font-size: 1.125rem; padding: 1.2rem 2.5rem;" data-i18n="index.cta.btn">Start Planning</a>
         </div>
     </section>
 
@@ -500,9 +563,9 @@
     <section class="section" style="background-color: var(--color-neutral-100);">
         <div class="container">
             <div style="text-align: center; margin-bottom: var(--spacing-lg);">
-                <span class="eyebrow reveal" style="justify-content: center;">Reviews & Feedback</span>
-                <h2 class="section-title reveal">Travellers' Stories</h2>
-                <p class="section-subtitle reveal" style="margin: 0 auto;">Hear from those who have journeyed with us across the landscapes of East Africa.</p>
+                <span class="eyebrow reveal" style="justify-content: center;" data-i18n="index.reviews.eyebrow">Reviews & Feedback</span>
+                <h2 class="section-title reveal" data-i18n="index.reviews.title">Travellers' Stories</h2>
+                <p class="section-subtitle reveal" style="margin: 0 auto;" data-i18n="index.reviews.subtitle">Hear from those who have journeyed with us across the landscapes of East Africa.</p>
             </div>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-md);">
@@ -510,7 +573,7 @@
                     <div style="display: flex; gap: 0.5rem; color: var(--color-accent); margin-bottom: 1rem;">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p style="font-style: italic; margin-bottom: 1.5rem;">"Our trip to Rwanda with Abroad Safaris LTD was absolutely life-changing. From the gorilla trekking to the local community visits, every detail was perfect. The team's knowledge and passion for their country shone through every day."</p>
+                    <p style="font-style: italic; margin-bottom: 1.5rem;">"Our trip to Rwanda with Abroad Safaris was absolutely life-changing. From the gorilla trekking to the local community visits, every detail was perfect. The team's knowledge and passion for their country shone through every day."</p>
                     <div style="display: flex; align-items: center; gap: 1rem;">
                         <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-neutral-300); overflow: hidden;">
                             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Sarah & Marc">
@@ -542,7 +605,7 @@
                     <div style="display: flex; gap: 0.5rem; color: var(--color-accent); margin-bottom: 1rem;">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p style="font-style: italic; margin-bottom: 1.5rem;">"Uganda's Murchison Falls and the chimps at Kibale were highlights, but what made it special was the seamless organization by Abroad Safaris LTD. We felt safe, cared for, and inspired the entire time."</p>
+                    <p style="font-style: italic; margin-bottom: 1.5rem;">"Uganda's Murchison Falls and the chimps at Kibale were highlights, but what made it special was the seamless organization by Abroad Safaris. We felt safe, cared for, and inspired the entire time."</p>
                     <div style="display: flex; align-items: center; gap: 1rem;">
                         <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-neutral-300); overflow: hidden;">
                             <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="David Chen">
@@ -565,11 +628,11 @@
                     <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
                         <img src="images/logo.png" alt="Abroad Safaris Logo" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid var(--color-accent);">
                         <div>
-                            <h3 style="color: var(--color-accent); margin: 0; font-size: 1.25rem;">Abroad Safaris LTD</h3>
+                            <h3 style="color: var(--color-accent); margin: 0; font-size: 1.25rem;" data-i18n="footer.brand">Abroad Safaris</h3>
                             <span style="font-size: 0.65rem; letter-spacing: 2px; color: rgba(255,255,255,0.5);">EAST AFRICA SPECIALISTS</span>
                         </div>
                     </div>
-                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 1.5rem;">Rwanda-born safari specialists across East Africa.</p>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 1.5rem;" data-i18n="footer.tagline">Rwanda-born safari specialists across East Africa.</p>
                     <div class="footer-social">
                         <a href="https://www.instagram.com/abroad.safaris" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.facebook.com/abroadsafaris" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
@@ -577,7 +640,7 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Explore</h4>
+                    <h4 data-i18n="footer.col.explore">Explore</h4>
                     <ul class="footer-links">
                         <li><a href="explore.html#rwanda">Rwanda</a></li>
                         <li><a href="explore.html#kenya">Kenya</a></li>
@@ -586,26 +649,26 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Company</h4>
+                    <h4 data-i18n="footer.col.company">Company</h4>
                     <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="tours.html">Tours & Packages</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html" data-i18n="footer.link.about">About Us</a></li>
+                        <li><a href="tours.html" data-i18n="footer.link.tours">Tours & Packages</a></li>
+                        <li><a href="blog.html" data-i18n="footer.link.blog">Blog</a></li>
+                        <li><a href="contact.html" data-i18n="footer.link.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact</h4>
+                    <h4 data-i18n="footer.col.contact">Contact</h4>
                     <ul class="footer-links">
-                        <li><a href="mailto:abroad.safaris@gmail.com">abroad.safaris@gmail.com</a></li>
+                        <li><a href="contact.html">Start planning with us</a></li>
                         <li><a href="tel:+250782773963">+250 782 773 963</a></li>
-                        <li><a href="https://wa.me/250782773963" target="_blank">WhatsApp us</a></li>
+                        <li><a href="https://wa.me/250782773963" target="_blank" data-i18n="footer.link.whatsapp">WhatsApp us</a></li>
                         <li style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-top: 1rem;">KG 5 Ave, Gasabo District, Kigali, Rwanda</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Abroad Safaris LTD. All rights reserved. Licensed since 2018.</p>
+                <p>&copy; 2025 Abroad Safaris. All rights reserved. Licensed since 2018.</p>
                 <div class="footer-pills">
                     <div class="pill">rw <span>Rwanda</span></div>
                     <div class="pill">ke <span>Kenya</span></div>
@@ -617,6 +680,8 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="js/i18n.js"></script>
+    <script src="js/inject-header.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

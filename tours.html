@@ -3,39 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tours & Packages | Abroad Safaris LTD</title>
+    <title>Tours & Packages | Abroad Safaris</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/global.css">
     
     <style>
-
-        .filter-bar {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: var(--spacing-xl);
-        }
-
-        .filter-btn {
-            background: transparent;
-            border: 1px solid var(--color-neutral-300);
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            cursor: pointer;
-            font-family: var(--font-heading);
-            font-weight: 500;
-            color: var(--color-neutral-800);
-            transition: var(--transition-fast);
-        }
-
-        .filter-btn.active, .filter-btn:hover {
-            background: var(--color-primary);
-            color: white;
-            border-color: var(--color-primary);
-        }
 
         .tours-grid {
             display: grid;
@@ -149,229 +123,212 @@
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="container nav">
-            <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Abroad Safaris Logo">
-                Abroad Safaris <span style="color: var(--color-accent);">LTD</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="explore.html">Explore East Africa</a></li>
-                <li><a href="tours.html" class="active">Tours & Packages</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="blog.html">Blog & Travel tips</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-            <div style="display: flex; align-items: center; gap: 1rem;">
-                <a href="contact.html" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.875rem;">Plan Your Trip</a>
-                <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
-            </div>
-        </div>
-    </header>
+    <!-- Header (injected) -->
+    <div id="site-header"></div>
 
     <!-- Page Header -->
     <div class="page-header">
         <img src="images/kenya-maasaimara.jpg" alt="Maasai Mara" class="page-header-bg">
         <div class="container reveal">
-            <span class="eyebrow" style="color: var(--color-accent); margin-bottom: 1rem; display: block; letter-spacing: 2px;">Signature Experiences</span>
-            <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); color: white; margin-bottom: 1rem;">Our Tours & Packages</h1>
-            <p style="opacity: 0.8; max-width: 600px; margin: 0 auto;">From 3-day gorilla treks to 21-day grand tours — discover itineraries designed for the curious traveller.</p>
+            <span class="eyebrow" style="color: var(--color-accent); margin-bottom: 1rem; display: block; letter-spacing: 2px;" data-i18n="tours.hero.eyebrow">Signature Experiences</span>
+            <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); color: white; margin-bottom: 1rem;" data-i18n="tours.hero.title">Our Tours & Packages</h1>
+            <p style="opacity: 0.8; max-width: 600px; margin: 0 auto;" data-i18n="tours.hero.subtitle">From 3-day gorilla treks to 21-day grand tours — discover itineraries designed for the curious traveller.</p>
         </div>
     </div>
 
     <section class="section">
         <div class="container">
-            <!-- Filter Bar -->
-            <div class="filter-bar reveal">
-                <button class="filter-btn active">All Tours</button>
-                <button class="filter-btn">Rwanda</button>
-                <button class="filter-btn">Kenya</button>
-                <button class="filter-btn">Tanzania</button>
-                <button class="filter-btn">Uganda</button>
-                <button class="filter-btn">Multi-Country</button>
+            <div class="text-center reveal" style="margin-bottom: 2rem;">
+                <span class="eyebrow" style="color: var(--color-primary);" data-i18n="tours.styles.eyebrow">Travel Styles</span>
+                <h2 class="section-title" data-i18n="tours.styles.title">Family, Romantic & Adventure Packages</h2>
+                <p class="section-subtitle" style="margin: 0 auto;" data-i18n="tours.styles.subtitle">Choose the kind of journey that feels right for you and let us shape it around your travel style, pace, and interests.</p>
             </div>
 
-            <!-- Tours Grid -->
-            <div class="tours-grid">
-                
-                <!-- Tour 1 -->
-                <div class="tour-card reveal">
-                    <div class="tour-img">
-                        <img src="images/rwanda-volcanoes.jpg.jpg" alt="Gorilla Trekking">
-                        <div class="tour-badge">Best Seller</div>
-                    </div>
-                    <div class="tour-content">
-                        <h3 class="tour-title">Ultimate Gorilla Trek</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 4 Days</span>
-                            <span><i class="fas fa-map-marker-alt"></i> Rwanda</span>
+            <section id="family-packages" class="reveal" style="margin-bottom: 2.5rem;">
+                <h3 style="font-size: 1.7rem; color: var(--color-primary); margin-bottom: 1rem;" data-i18n="tours.family.title">Family Packages</h3>
+                <div class="tours-grid">
+                    <div class="tour-card">
+                        <div class="tour-img">
+                            <img src="images/rwanda-volcanoes.jpg.jpg" alt="Gorilla Trekking">
+                            <div class="tour-badge">Best Seller</div>
                         </div>
-                        <p class="tour-desc">Face-to-face encounters with majestic mountain gorillas in Volcanoes National Park, combined with Kigali city exploration.</p>
-                        <div class="tour-footer">
-                            <div class="tour-price">From $1,800<span> / pp</span></div>
-                            <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Inquire</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tour 2 -->
-                <div class="tour-card reveal" style="transition-delay: 0.1s;">
-                    <div class="tour-img">
-                        <img src="images/rwanda-akagera.jpg.jpg" alt="Masai Mara Safari">
-                        <div class="tour-badge">Classic Safari</div>
-                    </div>
-                    <div class="tour-content">
-                        <h3 class="tour-title">Masai Mara Migration</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 6 Days</span>
-                            <span><i class="fas fa-map-marker-alt"></i> Kenya</span>
-                        </div>
-                        <p class="tour-desc">Witness the Great Migration and experience classic Big Five game drives across Kenya's legendary open savanna.</p>
-                        <div class="tour-footer">
-                            <div class="tour-price">From $2,200<span> / pp</span></div>
-                            <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Inquire</a>
+                        <div class="tour-content">
+                            <h3 class="tour-title">Ultimate Gorilla Trek</h3>
+                            <div class="tour-meta">
+                                <span><i class="far fa-clock"></i> 4 Days</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Rwanda</span>
+                            </div>
+                            <p class="tour-desc">Face-to-face encounters with majestic mountain gorillas in Volcanoes National Park, combined with Kigali city exploration.</p>
+                            <div class="tour-footer">
+                                <div class="tour-price">From $1,800<span> / pp</span></div>
+                                <a href="contact.html?inquiry=existing-tour&tour=Ultimate%20Gorilla%20Trek#quiz" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Inquire</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Tour 3 -->
-                <div class="tour-card reveal" style="transition-delay: 0.2s;">
-                    <div class="tour-img">
-                        <img src="images/rwanda-nyungwe.jpg.jpg" alt="Serengeti">
-                    </div>
-                    <div class="tour-content">
-                        <h3 class="tour-title">Serengeti & Crater Explorer</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 7 Days</span>
-                            <span><i class="fas fa-map-marker-alt"></i> Tanzania</span>
+                    <div class="tour-card" style="transition-delay: 0.1s;">
+                        <div class="tour-img">
+                            <img src="images/rwanda-akagera.jpg.jpg" alt="Kigali & Akagera">
+                            <div class="tour-badge">Affordable</div>
                         </div>
-                        <p class="tour-desc">Journey through the endless plains of the Serengeti and descend into the wildlife-rich Ngorongoro Crater.</p>
-                        <div class="tour-footer">
-                            <div class="tour-price">From $2,500<span> / pp</span></div>
-                            <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Inquire</a>
+                        <div class="tour-content">
+                            <h3 class="tour-title">Kigali & Akagera Getaway</h3>
+                            <div class="tour-meta">
+                                <span><i class="far fa-clock"></i> 3 Days</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Rwanda</span>
+                            </div>
+                            <p class="tour-desc">Perfect for a short break: explore the vibrant capital of Kigali before a thrilling Big Five safari in Akagera.</p>
+                            <div class="tour-footer">
+                                <div class="tour-price">From $900<span> / pp</span></div>
+                                <a href="contact.html?inquiry=existing-tour&tour=Kigali%20%26%20Akagera%20Getaway#quiz" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-card" style="transition-delay: 0.2s;">
+                        <div class="tour-img">
+                            <img src="images/rwanda-lakekivu.jpg.jpg" alt="Bush & Beach Escape">
+                        </div>
+                        <div class="tour-content">
+                            <h3 class="tour-title">Bush & Beach Escape</h3>
+                            <div class="tour-meta">
+                                <span><i class="far fa-clock"></i> 10 Days</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Tanzania</span>
+                            </div>
+                            <p class="tour-desc">Combine thrilling game drives in Tarangire and Serengeti with relaxing days on the pristine white sands of Zanzibar.</p>
+                            <div class="tour-footer">
+                                <div class="tour-price">From $3,200<span> / pp</span></div>
+                                <a href="contact.html?inquiry=existing-tour&tour=Bush%20%26%20Beach%20Escape#quiz" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Inquire</a>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <!-- Tour 4 -->
-                <div class="tour-card reveal">
-                    <div class="tour-img">
-                        <img src="images/rwanda-kingspalace.jpg.jpg" alt="Uganda Chimpanzees">
-                    </div>
-                    <div class="tour-content">
-                        <h3 class="tour-title">Pearl of Africa Primates</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 8 Days</span>
-                            <span><i class="fas fa-map-marker-alt"></i> Uganda</span>
+            <section id="romantic-packages" class="reveal" style="margin-bottom: 2.5rem;">
+                <h3 style="font-size: 1.7rem; color: var(--color-primary); margin-bottom: 1rem;" data-i18n="tours.romantic.title">Romantic Packages</h3>
+                <div class="tours-grid">
+                    <div class="tour-card">
+                        <div class="tour-img">
+                            <img src="images/Lake kivu.jpg.jpg" alt="Lake Kivu Sunset Retreat">
                         </div>
-                        <p class="tour-desc">Chimpanzee tracking in Kibale Forest, game drives in Queen Elizabeth, and gorilla trekking in Bwindi.</p>
-                        <div class="tour-footer">
-                            <div class="tour-price">From $2,800<span> / pp</span></div>
-                            <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Inquire</a>
+                        <div class="tour-content">
+                            <h3 class="tour-title">Lake Kivu Sunset Retreat</h3>
+                            <div class="tour-meta">
+                                <span><i class="far fa-clock"></i> 5 Days</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Rwanda</span>
+                            </div>
+                            <p class="tour-desc">A tranquil lakeside escape with boutique lodge stays, sunrise canoeing, and private sunset dinners on the shores of Lake Kivu.</p>
+                            <div class="tour-footer">
+                                <div class="tour-price">From $1,650<span> / pp</span></div>
+                                <a href="contact.html?inquiry=existing-tour&tour=Lake%20Kivu%20Sunset%20Retreat#quiz" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-card" style="transition-delay: 0.1s;">
+                        <div class="tour-img">
+                            <img src="images/uganda-jinja.jpg" alt="Best of Rwanda & Uganda">
+                            <div class="tour-badge">Top Rated</div>
+                        </div>
+                        <div class="tour-content">
+                            <h3 class="tour-title">Best of Rwanda & Uganda</h3>
+                            <div class="tour-meta">
+                                <span><i class="far fa-clock"></i> 12 Days</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Rw, Ug</span>
+                            </div>
+                            <p class="tour-desc">A deep dive into the heart of the Albertine Rift, featuring mountain gorillas, chimpanzees, and the source of the Nile.</p>
+                            <div class="tour-footer">
+                                <div class="tour-price">From $4,500<span> / pp</span></div>
+                                <a href="contact.html?inquiry=existing-tour&tour=Best%20of%20Rwanda%20%26%20Uganda#quiz" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Inquire</a>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <!-- Tour 5 -->
-                <div class="tour-card reveal" style="transition-delay: 0.1s;">
-                    <div class="tour-img">
-                        <img src="images/rwanda-bisoke.jpg.jpg" alt="East Africa Grand Tour">
-                        <div class="tour-badge">Grand Tour</div>
-                    </div>
-                    <div class="tour-content">
-                        <h3 class="tour-title">East Africa Explorer</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 14 Days</span>
-                            <span><i class="fas fa-map-marker-alt"></i> Rw, Ke, Tz</span>
+            <section id="adventure-packages" class="reveal">
+                <h3 style="font-size: 1.7rem; color: var(--color-primary); margin-bottom: 1rem;" data-i18n="tours.adventure.title">Adventure Packages</h3>
+                <div class="tours-grid">
+                    <div class="tour-card">
+                        <div class="tour-img">
+                            <img src="images/rwanda-akagera.jpg.jpg" alt="Masai Mara Migration">
+                            <div class="tour-badge">Classic Safari</div>
                         </div>
-                        <p class="tour-desc">The ultimate adventure combining Rwanda's gorillas, Kenya's Mara, and Tanzania's Serengeti in one seamless journey.</p>
-                        <div class="tour-footer">
-                            <div class="tour-price">From $6,300<span> / pp</span></div>
-                            <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Inquire</a>
+                        <div class="tour-content">
+                            <h3 class="tour-title">Masai Mara Migration</h3>
+                            <div class="tour-meta">
+                                <span><i class="far fa-clock"></i> 6 Days</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Kenya</span>
+                            </div>
+                            <p class="tour-desc">Witness the Great Migration and experience classic Big Five game drives across Kenya's legendary open savanna.</p>
+                            <div class="tour-footer">
+                                <div class="tour-price">From $2,200<span> / pp</span></div>
+                                <a href="contact.html?inquiry=existing-tour&tour=Masai%20Mara%20Migration#quiz" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-card" style="transition-delay: 0.1s;">
+                        <div class="tour-img">
+                            <img src="images/rwanda-nyungwe.jpg.jpg" alt="Serengeti & Crater Explorer">
+                        </div>
+                        <div class="tour-content">
+                            <h3 class="tour-title">Serengeti & Crater Explorer</h3>
+                            <div class="tour-meta">
+                                <span><i class="far fa-clock"></i> 7 Days</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Tanzania</span>
+                            </div>
+                            <p class="tour-desc">Journey through the endless plains of the Serengeti and descend into the wildlife-rich Ngorongoro Crater.</p>
+                            <div class="tour-footer">
+                                <div class="tour-price">From $2,500<span> / pp</span></div>
+                                <a href="contact.html?inquiry=existing-tour&tour=Serengeti%20%26%20Crater%20Explorer#quiz" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-card" style="transition-delay: 0.2s;">
+                        <div class="tour-img">
+                            <img src="images/rwanda-kingspalace.jpg.jpg" alt="Pearl of Africa Primates">
+                        </div>
+                        <div class="tour-content">
+                            <h3 class="tour-title">Pearl of Africa Primates</h3>
+                            <div class="tour-meta">
+                                <span><i class="far fa-clock"></i> 8 Days</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Uganda</span>
+                            </div>
+                            <p class="tour-desc">Chimpanzee tracking in Kibale Forest, game drives in Queen Elizabeth, and gorilla trekking in Bwindi.</p>
+                            <div class="tour-footer">
+                                <div class="tour-price">From $2,800<span> / pp</span></div>
+                                <a href="contact.html?inquiry=existing-tour&tour=Pearl%20of%20Africa%20Primates#quiz" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-card" style="transition-delay: 0.3s;">
+                        <div class="tour-img">
+                            <img src="images/rwanda-bisoke.jpg.jpg" alt="East Africa Explorer">
+                            <div class="tour-badge">Grand Tour</div>
+                        </div>
+                        <div class="tour-content">
+                            <h3 class="tour-title">East Africa Explorer</h3>
+                            <div class="tour-meta">
+                                <span><i class="far fa-clock"></i> 14 Days</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Rw, Ke, Tz</span>
+                            </div>
+                            <p class="tour-desc">The ultimate adventure combining Rwanda's gorillas, Kenya's Mara, and Tanzania's Serengeti in one seamless journey.</p>
+                            <div class="tour-footer">
+                                <div class="tour-price">From $6,300<span> / pp</span></div>
+                                <a href="contact.html?inquiry=existing-tour&tour=East%20Africa%20Explorer#quiz" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Inquire</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Tour 6 -->
-                <div class="tour-card reveal" style="transition-delay: 0.2s;">
-                    <div class="tour-img">
-                        <img src="images/rwanda-lakekivu.jpg.jpg" alt="Zanzibar Beach">
-                    </div>
-                    <div class="tour-content">
-                        <h3 class="tour-title">Bush & Beach Escape</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 10 Days</span>
-                            <span><i class="fas fa-map-marker-alt"></i> Tanzania</span>
-                        </div>
-                        <p class="tour-desc">Combine thrilling game drives in Tarangire and Serengeti with relaxing days on the pristine white sands of Zanzibar.</p>
-                        <div class="tour-footer">
-                            <div class="tour-price">From $3,200<span> / pp</span></div>
-                            <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Inquire</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tour 7: Added for more variety -->
-                <div class="tour-card reveal">
-                    <div class="tour-img">
-                        <img src="images/uganda-jinja.jpg" alt="Best of Rwanda & Uganda">
-                        <div class="tour-badge">Top Rated</div>
-                    </div>
-                    <div class="tour-content">
-                        <h3 class="tour-title">Best of Rwanda & Uganda</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 12 Days</span>
-                            <span><i class="fas fa-map-marker-alt"></i> Rw, Ug</span>
-                        </div>
-                        <p class="tour-desc">A deep dive into the heart of the Albertine Rift, featuring mountain gorillas, chimpanzees, and the source of the Nile.</p>
-                        <div class="tour-footer">
-                            <div class="tour-price">From $4,500<span> / pp</span></div>
-                            <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Inquire</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tour 8: Affordable Option -->
-                <div class="tour-card reveal" style="transition-delay: 0.1s;">
-                    <div class="tour-img">
-                        <img src="images/rwanda-akagera.jpg.jpg" alt="Kigali & Akagera">
-                        <div class="tour-badge">Affordable</div>
-                    </div>
-                    <div class="tour-content">
-                        <h3 class="tour-title">Kigali & Akagera Getaway</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 3 Days</span>
-                            <span><i class="fas fa-map-marker-alt"></i> Rwanda</span>
-                        </div>
-                        <p class="tour-desc">Perfect for a short break: explore the vibrant capital of Kigali before a thrilling Big Five safari in Akagera.</p>
-                        <div class="tour-footer">
-                            <div class="tour-price">From $900<span> / pp</span></div>
-                            <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Inquire</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            
-            <div class="text-center reveal" style="margin-top: 4rem; text-align: center;">
-                <p style="margin-bottom: 1.5rem; color: var(--color-neutral-800);">Looking for something completely unique?</p>
-                <a href="contact.html" class="btn btn-primary">Create Custom Itinerary</a>
-            </div>
-            
+            </section>
         </div>
     </section>
 
     <!-- Custom Safari CTA -->
     <section class="section" style="background-color: var(--color-primary-dark); color: white; text-align: center;">
         <div class="container reveal">
-            <h2 style="color: white; margin-bottom: 1rem;">Didn't find your perfect itinerary?</h2>
-            <p style="margin-bottom: 2.5rem; opacity: 0.8; max-width: 700px; margin-left: auto; margin-right: auto;">Our specialists are experts at crafting bespoke, tailor-made journeys that match your interests, budget, and travel style perfectly.</p>
+            <h2 style="color: white; margin-bottom: 1rem;" data-i18n="tours.cta.title">Ready to Plan Your Trip?</h2>
+            <p style="margin-bottom: 2.5rem; opacity: 0.8; max-width: 700px; margin-left: auto; margin-right: auto;" data-i18n="tours.cta.subtitle">Our specialists are experts at crafting bespoke, tailor-made journeys that match your interests, budget, and travel style perfectly.</p>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="contact.html" class="btn btn-accent">Customize My Safari</a>
-                <a href="contact.html#quiz" class="btn btn-outline" style="color: white; border-color: white;">Plan Your Trip</a>
+                <a href="contact.html?inquiry=plan-your-trip#quiz" class="btn btn-accent" data-i18n="tours.cta.btn">Start Planning</a>
             </div>
         </div>
     </section>
@@ -384,11 +341,11 @@
                     <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
                         <img src="images/logo.png" alt="Abroad Safaris Logo" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid var(--color-accent);">
                         <div>
-                            <h3 style="color: var(--color-accent); margin: 0; font-size: 1.25rem;">Abroad Safaris LTD</h3>
+                            <h3 style="color: var(--color-accent); margin: 0; font-size: 1.25rem;" data-i18n="footer.brand">Abroad Safaris</h3>
                             <span style="font-size: 0.65rem; letter-spacing: 2px; color: rgba(255,255,255,0.5);">EAST AFRICA SPECIALISTS</span>
                         </div>
                     </div>
-                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 1.5rem;">Rwanda-born safari specialists across East Africa.</p>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 1.5rem;" data-i18n="footer.tagline">Rwanda-born safari specialists across East Africa.</p>
                     <div class="footer-social">
                         <a href="https://www.instagram.com/abroad.safaris" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.facebook.com/abroadsafaris" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
@@ -396,7 +353,7 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Explore</h4>
+                    <h4 data-i18n="footer.col.explore">Explore</h4>
                     <ul class="footer-links">
                         <li><a href="explore.html#rwanda">Rwanda</a></li>
                         <li><a href="explore.html#kenya">Kenya</a></li>
@@ -405,26 +362,26 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Company</h4>
+                    <h4 data-i18n="footer.col.company">Company</h4>
                     <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="tours.html">Tours & Packages</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html" data-i18n="footer.link.about">About Us</a></li>
+                        <li><a href="tours.html" data-i18n="footer.link.tours">Tours & Packages</a></li>
+                        <li><a href="blog.html" data-i18n="footer.link.blog">Blog</a></li>
+                        <li><a href="contact.html" data-i18n="footer.link.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact</h4>
+                    <h4 data-i18n="footer.col.contact">Contact</h4>
                     <ul class="footer-links">
-                        <li><a href="mailto:abroad.safaris@gmail.com">abroad.safaris@gmail.com</a></li>
+                        <li><a href="contact.html">Start planning with us</a></li>
                         <li><a href="tel:+250782773963">+250 782 773 963</a></li>
-                        <li><a href="https://wa.me/250782773963" target="_blank">WhatsApp us</a></li>
+                        <li><a href="https://wa.me/250782773963" target="_blank" data-i18n="footer.link.whatsapp">WhatsApp us</a></li>
                         <li style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-top: 1rem;">KG 5 Ave, Gasabo District, Kigali, Rwanda</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Abroad Safaris LTD. All rights reserved. Licensed since 2018.</p>
+                <p>&copy; 2025 Abroad Safaris. All rights reserved. Licensed since 2018.</p>
                 <div class="footer-pills">
                     <div class="pill">rw <span>Rwanda</span></div>
                     <div class="pill">ke <span>Kenya</span></div>
@@ -435,6 +392,8 @@
         </div>
     </footer>
 
+    <script src="js/i18n.js"></script>
+    <script src="js/inject-header.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

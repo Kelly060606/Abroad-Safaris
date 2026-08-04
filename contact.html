@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Abroad Safaris LTD</title>
+    <title>Contact Us | Abroad Safaris</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/variables.css">
@@ -138,37 +138,16 @@
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="container nav">
-            <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Abroad Safaris Logo">
-                Abroad Safaris <span style="color: var(--color-accent);">LTD</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="explore.html">Explore East Africa</a></li>
-                <li><a href="tours.html">Tours & Packages</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="blog.html">Blog & Travel tips</a></li>
-                <li><a href="contact.html" class="active">Contact Us</a></li>
-            </ul>
-            <div style="display: flex; align-items: center; gap: 1rem;">
-                <a href="contact.html" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.875rem;">Plan Your Trip</a>
-                <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
-            </div>
-        </div>
-    </header>
+    <!-- Header (injected) -->
+    <div id="site-header"></div>
 
     <!-- Page Header -->
     <div class="page-header">
-        <img src="images/tour-guides.jpg.jfif" alt="Abroad Safaris Guides" class="page-header-bg" style="opacity: 0.4; object-position: center 35%; transform: scale(1.25); transform-origin: center;">
+        <img src="images/clotilde-contact.jpeg" alt="Abroad Safaris Guides" class="page-header-bg" style="opacity: 0.4; object-position: center 35%; transform: scale(1.25); transform-origin: center;">
         <div class="container reveal">
-            <span class="eyebrow" style="color: var(--color-accent); margin-bottom: 1rem; display: block; letter-spacing: 2px;">Get In Touch</span>
-            <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); color: white; margin-bottom: 1rem;">Let's Plan Your Journey</h1>
-            <p style="opacity: 0.8; max-width: 600px; margin: 0 auto;">Ready to start planning the adventure of a lifetime? Our team of East Africa experts is here to help craft your perfect itinerary.</p>
-        </div>
+            <span class="eyebrow" style="color: var(--color-accent); margin-bottom: 1rem; display: block; letter-spacing: 2px;" data-i18n="contact.hero.eyebrow">Get In Touch</span>
+            <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); color: white; margin-bottom: 1rem;" data-i18n="contact.hero.title">Let's Plan Your Journey</h1>
+            <p style="opacity: 0.8; max-width: 600px; margin: 0 auto;" data-i18n="contact.hero.subtitle">Ready to start planning the adventure of a lifetime? Our team of East Africa experts is here to help craft your perfect itinerary.</p>
     </div>
 
     <!-- Contact Section -->
@@ -177,12 +156,12 @@
             
             <!-- Contact Info -->
             <div class="contact-info reveal">
-                <h3 style="color: white; font-size: 1.5rem; margin-bottom: 2rem;">Get in Touch</h3>
+                <h3 style="color: white; font-size: 1.5rem; margin-bottom: 2rem;" data-i18n="contact.info.title">Get in Touch</h3>
                 
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>
                     <div>
-                        <h4>Head Office</h4>
+                        <h4 data-i18n="contact.office">Head Office</h4>
                         <p>Kigali, Rwanda<br>KG 5 Ave, Gasabo District</p>
                     </div>
                 </div>
@@ -190,21 +169,21 @@
                 <div class="contact-item">
                     <i class="fab fa-whatsapp"></i>
                     <div>
-                        <h4>Call / WhatsApp</h4>
-                        <p>+250 782 773 963<br>Mon-Fri, 8am to 6pm CAT</p>
+                        <h4 data-i18n="contact.phone.label">Call / WhatsApp</h4>
+                        <p>+250 782 773 963<br><span data-i18n="contact.phone.hours">Mon-Fri, 8am to 6pm CAT</span></p>
                     </div>
                 </div>
                 
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
                     <div>
-                        <h4>Email Us</h4>
-                        <p>abroad.safaris@gmail.com<br>bookings@abroadsafaris.com</p>
+                        <h4 data-i18n="contact.email.label">Email Us</h4>
+                        <p data-i18n="contact.email.helper">Share your travel plans and we’ll suggest the best next step.</p>
                     </div>
                 </div>
                 
                 <div style="margin-top: 3rem;">
-                    <h4 style="color: white; margin-bottom: 1rem;">Follow Our Adventures</h4>
+                    <h4 style="color: white; margin-bottom: 1rem;" data-i18n="contact.follow">Follow Our Adventures</h4>
                     <div style="display: flex; gap: 1rem; font-size: 1.5rem;">
                         <a href="https://www.instagram.com/abroad.safaris" target="_blank" style="color: var(--color-accent);"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.facebook.com/abroadsafaris" target="_blank" style="color: var(--color-accent);"><i class="fab fa-facebook"></i></a>
@@ -215,60 +194,76 @@
 
             <!-- Contact Form / Quiz -->
             <div class="form-container reveal" style="transition-delay: 0.2s;" id="quiz">
-                <h2 style="font-size: 2rem; margin-bottom: 0.5rem; color: var(--color-primary-dark);">Plan My Trip</h2>
-                <p style="color: var(--color-neutral-800); margin-bottom: 2rem;">Fill out the form below for a general inquiry or custom itinerary request.</p>
+                <h2 style="font-size: 2rem; margin-bottom: 0.5rem; color: var(--color-primary-dark);" data-i18n="contact.form.title">Start Planning</h2>
+                <p style="color: var(--color-neutral-800); margin-bottom: 2rem;" data-i18n="contact.form.subtitle">Share your travel interests and we will help shape the most suitable East Africa journey for you.</p>
                 
-                <form action="mailto:abroad.safaris@gmail.com" method="POST" enctype="text/plain">
+                <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <p style="display:none;"><label>Don’t fill this out if you're human: <input name="bot-field"></label></p>
+                    <input type="hidden" id="source_field" name="source" value="">
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="contact.form.inquiry">What would you like help with?</label>
+                        <select class="form-control" id="inquiry_type" name="inquiry_type" required>
+                            <option value="existing-tour" data-i18n="contact.form.opt1">Book an Existing Tour or Package</option>
+                            <option value="custom-trip" data-i18n="contact.form.opt2">Create a Custom Trip</option>
+                            <option value="other-inquiry" data-i18n="contact.form.opt3">Other Inquiry</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="contact.form.tour">Tour / Package</label>
+                        <input type="text" id="tour_package" name="tour_package" class="form-control" placeholder="e.g. Akagera National Park" data-i18n-placeholder="contact.form.placeholder.tour">
+                    </div>
+
                     <div class="form-row">
                         <div class="form-group">
-                            <label class="form-label">First Name</label>
-                            <input type="text" class="form-control" required>
+                            <label class="form-label" data-i18n="contact.form.firstname">First Name</label>
+                            <input type="text" name="first_name" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Last Name</label>
-                            <input type="text" class="form-control" required>
+                            <label class="form-label" data-i18n="contact.form.lastname">Last Name</label>
+                            <input type="text" name="last_name" class="form-control" required>
                         </div>
                     </div>
                     
                     <div class="form-row">
                         <div class="form-group">
-                            <label class="form-label">Email Address</label>
-                            <input type="email" class="form-control" required>
+                            <label class="form-label" data-i18n="contact.form.email">Email Address</label>
+                            <input type="email" name="email" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Phone Number (Optional)</label>
-                            <input type="tel" class="form-control">
+                            <label class="form-label" data-i18n="contact.form.phone">Phone Number (Optional)</label>
+                            <input type="tel" name="phone" class="form-control">
                         </div>
                     </div>
                     
                     <div class="form-group">
-                        <label class="form-label">Which countries are you interested in?</label>
+                        <label class="form-label" data-i18n="contact.form.countries">Which countries are you interested in?</label>
                         <div class="radio-group">
-                            <label><input type="checkbox"> <span class="radio-btn">Rwanda</span></label>
-                            <label><input type="checkbox"> <span class="radio-btn">Kenya</span></label>
-                            <label><input type="checkbox"> <span class="radio-btn">Tanzania</span></label>
-                            <label><input type="checkbox"> <span class="radio-btn">Uganda</span></label>
-                            <label><input type="checkbox"> <span class="radio-btn">Not sure yet</span></label>
+                            <label><input type="checkbox" name="countries" value="Rwanda"> <span class="radio-btn" data-i18n="index.dest.rwanda.tags">Rwanda</span></label>
+                            <label><input type="checkbox" name="countries" value="Kenya"> <span class="radio-btn" data-i18n="index.dest.kenya.tags">Kenya</span></label>
+                            <label><input type="checkbox" name="countries" value="Tanzania"> <span class="radio-btn" data-i18n="index.dest.tanzania.tags">Tanzania</span></label>
+                            <label><input type="checkbox" name="countries" value="Uganda"> <span class="radio-btn" data-i18n="index.dest.uganda.tags">Uganda</span></label>
+                            <label><input type="checkbox" name="countries" value="Not sure yet"> <span class="radio-btn" data-i18n="contact.form.not_sure">Not sure yet</span></label>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label class="form-label">Estimated Travel Date</label>
-                            <input type="month" class="form-control">
+                            <label class="form-label" data-i18n="contact.form.date">Estimated Travel Date</label>
+                            <input type="month" name="travel_date" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Number of Travellers</label>
-                            <input type="number" class="form-control" min="1" placeholder="2">
+                            <label class="form-label" data-i18n="contact.form.travellers">Number of Travellers</label>
+                            <input type="number" name="travellers" class="form-control" min="1" placeholder="2" data-i18n-placeholder="contact.form.placeholder.travellers">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label">Tell us about your dream safari</label>
-                        <textarea class="form-control" placeholder="Are you interested in gorillas, the great migration, family travel, or luxury lodges? Let us know what matters most to you..."></textarea>
+                        <label class="form-label" data-i18n="contact.form.message">Tell us about your dream safari</label>
+                        <textarea name="message" class="form-control" placeholder="Share your preferred destinations, travel dates, number of travelers, special requests, and interests..." data-i18n-placeholder="contact.form.placeholder.message"></textarea>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Inquiry</button>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;" data-i18n="contact.form.submit">Send Inquiry</button>
                 </form>
             </div>
             
@@ -283,7 +278,7 @@
                     <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
                         <img src="images/logo.png" alt="Abroad Safaris Logo" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid var(--color-accent);">
                         <div>
-                            <h3 style="color: var(--color-accent); margin: 0; font-size: 1.25rem;">Abroad Safaris LTD</h3>
+                            <h3 style="color: var(--color-accent); margin: 0; font-size: 1.25rem;">Abroad Safaris</h3>
                             <span style="font-size: 0.65rem; letter-spacing: 2px; color: rgba(255,255,255,0.5);">EAST AFRICA SPECIALISTS</span>
                         </div>
                     </div>
@@ -295,7 +290,7 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Explore</h4>
+                    <h4 data-i18n="footer.col.explore">Explore</h4>
                     <ul class="footer-links">
                         <li><a href="explore.html#rwanda">Rwanda</a></li>
                         <li><a href="explore.html#kenya">Kenya</a></li>
@@ -304,26 +299,26 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Company</h4>
+                    <h4 data-i18n="footer.col.company">Company</h4>
                     <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="tours.html">Tours & Packages</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html" data-i18n="footer.link.about">About Us</a></li>
+                        <li><a href="tours.html" data-i18n="footer.link.tours">Tours & Packages</a></li>
+                        <li><a href="blog.html" data-i18n="footer.link.blog">Blog</a></li>
+                        <li><a href="contact.html" data-i18n="footer.link.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact</h4>
+                    <h4 data-i18n="footer.col.contact">Contact</h4>
                     <ul class="footer-links">
-                        <li><a href="mailto:abroad.safaris@gmail.com">abroad.safaris@gmail.com</a></li>
+                        <li><a href="contact.html">Start planning with us</a></li>
                         <li><a href="tel:+250782773963">+250 782 773 963</a></li>
-                        <li><a href="https://wa.me/250782773963" target="_blank">WhatsApp us</a></li>
+                        <li><a href="https://wa.me/250782773963" target="_blank" data-i18n="footer.link.whatsapp">WhatsApp us</a></li>
                         <li style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-top: 1rem;">KG 5 Ave, Gasabo District, Kigali, Rwanda</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Abroad Safaris LTD. All rights reserved. Licensed since 2018.</p>
+                <p>&copy; 2025 Abroad Safaris. All rights reserved. Licensed since 2018.</p>
                 <div class="footer-pills">
                     <div class="pill">rw <span>Rwanda</span></div>
                     <div class="pill">ke <span>Kenya</span></div>
@@ -334,6 +329,57 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/i18n.js" defer></script>
+    <script src="js/inject-header.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const inquiry = params.get('inquiry');
+            const tour = params.get('tour');
+            const form = document.getElementById('contact-form');
+            const inquiryType = document.getElementById('inquiry_type');
+            const tourPackage = document.getElementById('tour_package');
+            const tourPackageGroup = tourPackage ? tourPackage.closest('.form-group') : null;
+            const sourceField = document.getElementById('source_field');
+
+            if (form && inquiryType) {
+                if (inquiry === 'custom-trip' || inquiry === 'plan-your-trip') {
+                    inquiryType.value = 'custom-trip';
+                } else {
+                    inquiryType.value = 'existing-tour';
+                }
+            }
+
+            if (sourceField) {
+                sourceField.value = inquiry ? inquiry : 'general';
+            }
+
+            if (tourPackage && tour) {
+                tourPackage.value = decodeURIComponent(tour);
+            }
+            
+            function toggleTourField() {
+                if (tourPackageGroup && inquiryType) {
+                    if (inquiryType.value === 'Book an Existing Tour or Package') {
+                        tourPackageGroup.style.display = 'block';
+                    } else {
+                        tourPackageGroup.style.display = 'none';
+                        tourPackage.value = ''; // clear the field when hidden
+                    }
+                }
+            }
+
+            if (inquiryType) {
+                inquiryType.addEventListener('change', toggleTourField);
+                toggleTourField(); // run on page load
+            }
+
+            if (window.location.hash === '#quiz' && form) {
+                setTimeout(() => form.scrollIntoView({ behavior: 'smooth', block: 'start' }), 200);
+            }
+        });
+    </script>
 </body>
 </html>

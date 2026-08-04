@@ -60,4 +60,22 @@ document.addEventListener('DOMContentLoaded', () => {
       menuItems[i].className = "active";
     }
   }
+
+  // --- Simple form submit UX for Netlify forms ---
+  const netlifyForms = document.querySelectorAll('form[name="transport-quote"], form[name="program-application"], form[name="contact"]');
+  netlifyForms.forEach(form => {
+    form.addEventListener('submit', (e) => {
+      const btn = form.querySelector('button[type="submit"]');
+      if (btn) {
+        btn.disabled = true;
+        const orig = btn.innerHTML;
+        btn.innerHTML = 'Sending...';
+        // allow natural submission to proceed (Netlify will capture on deploy)
+        setTimeout(() => {
+          btn.innerHTML = orig;
+          btn.disabled = false;
+        }, 3000);
+      }
+    });
+  });
 });

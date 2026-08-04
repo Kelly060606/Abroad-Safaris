@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Abroad Safaris LTD</title>
+    <title>About Us | Abroad Safaris</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/variables.css">
@@ -100,6 +100,20 @@
             margin-bottom: 1rem;
         }
 
+        .team-subtitle {
+            font-size: 0.9rem;
+            color: var(--color-primary);
+            font-weight: 600;
+            margin-bottom: 0.85rem;
+        }
+
+        .team-bio {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--color-neutral-800);
+            margin: 0;
+        }
+
         @media (max-width: 768px) {
             .story-section {
                 grid-template-columns: 1fr;
@@ -113,51 +127,72 @@
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="container nav">
-            <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Abroad Safaris Logo">
-                Abroad Safaris <span style="color: var(--color-accent);">LTD</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About Us</a></li>
-                <li><a href="explore.html">Explore East Africa</a></li>
-                <li><a href="tours.html">Tours & Packages</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="blog.html">Blog & Travel tips</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-            <div style="display: flex; align-items: center; gap: 1rem;">
-                <a href="contact.html" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.875rem;">Plan Your Trip</a>
-                <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
-            </div>
-        </div>
-    </header>
+    <!-- Header (injected) -->
+    <div id="site-header"></div>
 
     <!-- Page Header -->
     <div class="page-header">
         <img src="images/Lake kivu.jpg.jpg" alt="Lake Kivu" class="page-header-bg">
         <div class="container reveal">
-            <span class="eyebrow" style="color: var(--color-accent); margin-bottom: 1rem; display: block; letter-spacing: 2px;">Our Story</span>
-            <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); color: white; margin-bottom: 1rem;">Rooted in East Africa</h1>
-            <p style="opacity: 0.8; max-width: 600px; margin: 0 auto;">Discover the passion, expertise, and commitment to conservation that drives everything we do.</p>
+            <span class="eyebrow" style="color: var(--color-accent); margin-bottom: 1rem; display: block; letter-spacing: 2px;" data-i18n="about.hero.eyebrow">Our Story</span>
+            <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); color: white; margin-bottom: 1rem;" data-i18n="about.hero.title">Rooted in East Africa</h1>
+            <p style="opacity: 0.8; max-width: 600px; margin: 0 auto;" data-i18n="about.hero.subtitle">Discover the passion, expertise, and commitment to conservation that drives everything we do.</p>
         </div>
     </div>
+
+    <!-- Company Info Highlight Cards -->
+    <section style="background: var(--color-primary-dark); padding: 2.5rem 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
+                <div class="reveal" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 1.75rem 2rem; display: flex; align-items: flex-start; gap: 1.25rem; backdrop-filter: blur(8px); transition: background 0.3s;">
+                    <div style="flex-shrink: 0; width: 52px; height: 52px; background: rgba(224,168,0,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--color-accent); font-size: 1.5rem;"><i class="fas fa-building"></i></div>
+                    <div>
+                        <p style="font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: var(--color-accent); margin-bottom: 0.35rem; font-weight: 600;">Company</p>
+                        <h4 style="color: white; font-size: 1.15rem; margin-bottom: 0.25rem;">Abroad Safaris</h4>
+                        <p style="color: rgba(255,255,255,0.6); font-size: 0.85rem; margin: 0;">Trusted safari specialists in East Africa</p>
+                    </div>
+                </div>
+                <div class="reveal" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 1.75rem 2rem; display: flex; align-items: flex-start; gap: 1.25rem; backdrop-filter: blur(8px); transition: background 0.3s; transition-delay: 0.1s;">
+                    <div style="flex-shrink: 0; width: 52px; height: 52px; background: rgba(31,77,58,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--color-accent); font-size: 1.5rem;"><i class="fas fa-flag"></i></div>
+                    <div>
+                        <p style="font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: var(--color-accent); margin-bottom: 0.35rem; font-weight: 600;">Country</p>
+                        <h4 style="color: white; font-size: 1.15rem; margin-bottom: 0.25rem;">Rwanda</h4>
+                        <p style="color: rgba(255,255,255,0.6); font-size: 0.85rem; margin: 0;">A welcoming East African base for regional travel</p>
+                    </div>
+                </div>
+                <div class="reveal" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 1.75rem 2rem; display: flex; align-items: flex-start; gap: 1.25rem; backdrop-filter: blur(8px); transition: background 0.3s; transition-delay: 0.2s;">
+                    <div style="flex-shrink: 0; width: 52px; height: 52px; background: rgba(224,168,0,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--color-accent); font-size: 1.5rem;"><i class="fas fa-map-marker-alt"></i></div>
+                    <div>
+                        <p style="font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: var(--color-accent); margin-bottom: 0.35rem; font-weight: 600;">Location</p>
+                        <h4 style="color: white; font-size: 1.15rem; margin-bottom: 0.25rem;">Kigali, Rwanda</h4>
+                        <p style="color: rgba(255,255,255,0.6); font-size: 0.85rem; margin: 0;">KG 5 Ave, Gasabo District</p>
+                    </div>
+                </div>
+                <div class="reveal" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 1.75rem 2rem; display: flex; align-items: flex-start; gap: 1.25rem; backdrop-filter: blur(8px); transition: background 0.3s; transition-delay: 0.3s;">
+                    <div style="flex-shrink: 0; width: 52px; height: 52px; background: rgba(31,77,58,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--color-accent); font-size: 1.5rem;"><i class="fas fa-cloud-sun"></i></div>
+                    <div>
+                        <p style="font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: var(--color-accent); margin-bottom: 0.35rem; font-weight: 600;">Climate</p>
+                        <h4 style="color: white; font-size: 1.15rem; margin-bottom: 0.25rem;">Mild Highland Climate</h4>
+                        <p style="color: rgba(255,255,255,0.6); font-size: 0.85rem; margin: 0;">Rwanda has comfortable temperatures throughout much of the year and distinct wet and dry seasons.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Story Section -->
     <section class="section">
         <div class="container story-section">
             <div class="story-content reveal">
-                <span class="eyebrow">Our Mission</span>
-                <h2 class="section-title">Authentic. Personal. Responsible.</h2>
-                <p>Abroad Safaris LTD was built on a simple idea. East Africa should be experienced in its most authentic form, while the landscapes and wildlife are respected and protected.</p>
+                <span class="eyebrow" data-i18n="about.mission.eyebrow">Our Mission</span>
+                <h2 class="section-title" data-i18n="about.mission.title">Authentic. Personal. Responsible.</h2>
+                <p>Abroad Safaris was built on a simple idea. East Africa should be experienced in its most authentic form, while the landscapes and wildlife are respected and protected.</p>
                 <p>What started as a small team of passionate local guides has grown into a trusted safari company operating across Rwanda, Kenya, Tanzania, and Uganda. Even as we’ve grown, we’ve kept the same personal approach at the heart of everything we do.</p>
+                <p>We focus on authentic cultural immersion and meaningful community interaction, creating journeys that connect travelers with local traditions, stories, and everyday life in the places they visit.</p>
                 <p>We don’t just plan trips. We create experiences that stay with you. From trekking mountain gorillas in misty forests to watching the Great Migration unfold across the savanna, every journey is designed to feel personal, responsible, and truly unforgettable.</p>
             </div>
             <div class="story-image reveal" style="transition-delay: 0.2s;">
-                <img src="images/mission.jpg.jfif" alt="Our Mission in Action">
+                <img src="images/truck.jpeg" alt="Our Mission in Action">
             </div>
         </div>
     </section>
@@ -166,16 +201,16 @@
     <section class="section" style="background-color: var(--color-primary-dark); color: white;">
         <div class="container">
             <div class="text-center reveal" style="text-align: center; margin-bottom: var(--spacing-lg);">
-                <span class="eyebrow" style="color: var(--color-accent);">Our Commitment</span>
-                <h2 class="section-title" style="color: white;">Travel With Purpose</h2>
-                <p class="section-subtitle" style="margin: 0 auto; color: rgba(255,255,255,0.8);">We believe that tourism, when done right, is a powerful force for good.</p>
+                <span class="eyebrow" style="color: var(--color-accent);" data-i18n="about.commitment.eyebrow">Our Commitment</span>
+                <h2 class="section-title" style="color: white;" data-i18n="about.commitment.title">Travel With Purpose</h2>
+                <p class="section-subtitle" style="margin: 0 auto; color: rgba(255,255,255,0.8);" data-i18n="about.commitment.subtitle">We believe that tourism, when done right, is a powerful force for good.</p>
             </div>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-md);">
                 <div class="glass-card reveal" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
                     <div style="color: var(--color-accent); font-size: 2rem; margin-bottom: 1rem;"><i class="fas fa-hand-holding-heart"></i></div>
                     <h4 style="color: white; margin-bottom: 0.5rem; font-size: 1.25rem;">Community First</h4>
-                    <p style="font-size: 0.875rem; color: rgba(255,255,255,0.7);">We hire local guides, partner with community-owned lodges, and ensure your tourism dollars directly benefit the people who call these landscapes home.</p>
+                    <p style="font-size: 0.875rem; color: rgba(255,255,255,0.7);">We hire local guides, work closely with local communities and businesses, and ensure your tourism investment directly benefits the people who call these landscapes home.</p>
                 </div>
                 
                 <div class="glass-card reveal" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); transition-delay: 0.1s;">
@@ -194,12 +229,24 @@
     </section>
     
     <!-- Community Partners Section -->
+    <!-- Community Impact -->
     <section class="section" style="background-color: var(--color-neutral-100);">
         <div class="container">
             <div class="text-center reveal" style="text-align: center; margin-bottom: var(--spacing-lg);">
-                <span class="eyebrow" style="color: var(--color-primary);">Social Impact</span>
-                <h2 class="section-title">Our Community Partners</h2>
+                <span class="eyebrow" style="color: var(--color-primary);" data-i18n="about.impact.eyebrow">Community Impact</span>
+                <h2 class="section-title" data-i18n="about.impact.title">Our Contribution to Local Communities</h2>
+                <p class="section-subtitle" style="margin: 0 auto; max-width: 800px;">Approximately <strong>30%</strong> of eligible tourism proceeds are reinvested into local communities to support improved livelihoods, youth and women empowerment, cultural preservation, and sustainable community development.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--color-neutral-100);">
+        <div class="container">
+            <div class="text-center reveal" style="text-align: center; margin-bottom: var(--spacing-lg);">
+                <span class="eyebrow" style="color: var(--color-primary);" data-i18n="about.partners.eyebrow">Social Impact</span>
+                <h2 class="section-title" data-i18n="about.partners.title">Our Community Partners</h2>
                 <p class="section-subtitle" style="margin: 0 auto;">We believe that tourism should directly benefit the people who call these landscapes home. Through our partnerships, we support sustainable livelihoods and cultural preservation.</p>
+                <p class="section-subtitle" style="margin: 0 auto; margin-top: 0.75rem; max-width: 800px;">Abroad Safaris works with local cultural organizations such as Volcano Arts Center and Hospes in Musanze near Volcanoes National Park, and collaborates with schools and educational institutions where appropriate to create meaningful cultural and learning experiences.</p>
             </div>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-md);">
@@ -240,9 +287,9 @@
     <section class="section" style="background-color: var(--color-neutral-100);">
         <div class="container">
             <div class="text-center reveal" style="text-align: center; margin-bottom: var(--spacing-lg);">
-                <span class="eyebrow" style="color: var(--color-accent);">Sustainability in Action</span>
-                <h2 class="section-title">Empowering Local Communities</h2>
-                <p class="section-subtitle" style="margin: 0 auto;">Beyond creating unforgettable travel experiences, Abroad Safaris LTD works closely with local communities, especially women and youth groups, supporting sustainable economic opportunities created through tourism. Through craft markets, cultural performances, guiding services, and other community-led initiatives, tourism helps improve livelihoods and strengthen local resilience.</p>
+                <span class="eyebrow" style="color: var(--color-accent);" data-i18n="about.empower.eyebrow">Sustainability in Action</span>
+                <h2 class="section-title" data-i18n="about.empower.title">Empowering Local Communities</h2>
+                <p class="section-subtitle" style="margin: 0 auto;">Beyond creating unforgettable travel experiences, Abroad Safaris works closely with local communities, especially youth, women, and local community groups, supporting sustainable economic opportunities created through tourism. Through craft markets, cultural performances, guiding services, and other community-led initiatives, tourism helps improve livelihoods and strengthen local resilience.</p>
             </div>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg);">
@@ -270,13 +317,62 @@
             </div>
         </div>
     </section>
-
-    <!-- Educational Partnerships Section -->
+    
+    <!-- Youth Empowerment -->
     <section class="section">
         <div class="container">
             <div class="text-center reveal" style="text-align: center; margin-bottom: var(--spacing-lg);">
-                <span class="eyebrow" style="color: var(--color-primary);">Knowledge Exchange</span>
-                <h2 class="section-title">Educational Partnerships</h2>
+                <span class="eyebrow" style="color: var(--color-primary);" data-i18n="about.youth.eyebrow">Career Pathways</span>
+                <h2 class="section-title" data-i18n="about.youth.title">Youth Empowerment</h2>
+                <p class="section-subtitle" style="margin: 0 auto; max-width: 900px;">We proudly work with young professionals who have completed or are completing studies in Tourism and Hospitality, providing practical experience, mentorship, and career opportunities while delivering exceptional guest experiences.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educational Partnerships Section -->
+    <!-- Our Unique Experiences -->
+    <section class="section" style="background-color: var(--color-neutral-100);">
+        <div class="container">
+            <div class="text-center reveal" style="text-align: center; margin-bottom: var(--spacing-lg);">
+                <span class="eyebrow" style="color: var(--color-primary);" data-i18n="about.unique.eyebrow">Distinct Moments</span>
+                <h2 class="section-title" data-i18n="about.unique.title">Our Unique Experiences</h2>
+                <p class="section-subtitle" style="margin: 0 auto; max-width: 800px;">In addition to wildlife safaris, Abroad Safaris offers curated cultural immersion experiences that connect guests with living traditions, local artisans, and community life.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--spacing-md);">
+                <div class="glass-card reveal" style="padding: 2rem; text-align: left;">
+                    <h4 style="margin-bottom: 0.5rem;">🌍 Cultural Immersion</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-neutral-800);">Guests experience authentic Rwandan culture through direct interaction with local families, community groups, and artisans.</p>
+                </div>
+                <div class="glass-card reveal" style="padding: 2rem; text-align: left;">
+                    <h4 style="margin-bottom: 0.5rem;">💃 Traditional Dance</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-neutral-800);">Visitors learn and participate in Gakondo — traditional Rwandan dances led by local performers.</p>
+                </div>
+                <div class="glass-card reveal" style="padding: 2rem; text-align: left;">
+                    <h4 style="margin-bottom: 0.5rem;">🎲 Traditional Games</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-neutral-800);">Discover and play local games such as Igisoro and Gusimbuka Urukirampende alongside community members.</p>
+                </div>
+                <div class="glass-card reveal" style="padding: 2rem; text-align: left;">
+                    <h4 style="margin-bottom: 0.5rem;">👘 Traditional Clothing</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-neutral-800);">Guests have opportunities to wear traditional attire including Imikenyero and Kitenge while learning their cultural significance.</p>
+                </div>
+                <div class="glass-card reveal" style="padding: 2rem; text-align: left;">
+                    <h4 style="margin-bottom: 0.5rem;">🧺 Local Arts & Crafts</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-neutral-800);">Engage with artisans to discover Ikibo, Igiseke, and Imigongo art, supporting locally made crafts and fair-trade practices.</p>
+                </div>
+                <div class="glass-card reveal" style="padding: 2rem; text-align: left;">
+                    <h4 style="margin-bottom: 0.5rem;">🤝 Community Interaction</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-neutral-800);">These activities allow visitors to learn about Rwandan culture and interact meaningfully with local communities through shared experiences and respectful exchange.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="text-center reveal" style="text-align: center; margin-bottom: var(--spacing-lg);">
+                <span class="eyebrow" style="color: var(--color-primary);" data-i18n="about.edu.eyebrow">Knowledge Exchange</span>
+                <h2 class="section-title" data-i18n="about.edu.title">Educational Partnerships</h2>
                 <p class="section-subtitle" style="margin: 0 auto;">We proudly collaborate with primary schools, secondary schools, universities, and educational institutions across Rwanda and East Africa to support research, learning exchange, and volunteer programs.</p>
             </div>
 
@@ -301,19 +397,36 @@
         </div>
     </section>
 
+    <section class="section" style="background-color: var(--color-neutral-100);">
+        <div class="container">
+            <div class="text-center reveal" style="text-align: center; margin-bottom: var(--spacing-lg);">
+                <span class="eyebrow" style="color: var(--color-primary);" data-i18n="about.sets.eyebrow">Why Travel With Us</span>
+                <h2 class="section-title" data-i18n="about.sets.title">What Sets Us Apart</h2>
+                <p class="section-subtitle" style="margin: 0 auto; max-width: 800px;">From expert local guidance to genuine community connection, every journey is designed to feel personal, safe, and deeply rooted in East Africa.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--spacing-md);">
+                <div class="glass-card reveal"><h4 style="margin-bottom: 0.5rem;">Experienced Local Experts</h4><p style="font-size: 0.95rem; color: var(--color-neutral-800);">Our team brings deep local knowledge, practical insight, and trusted on-the-ground support to every journey.</p></div>
+                <div class="glass-card reveal" style="transition-delay: 0.05s;"><h4 style="margin-bottom: 0.5rem;">Authentic Cultural Immersion</h4><p style="font-size: 0.95rem; color: var(--color-neutral-800);">We create opportunities to engage with local traditions, music, food, crafts, and community life.</p></div>
+                <div class="glass-card reveal" style="transition-delay: 0.1s;"><h4 style="margin-bottom: 0.5rem;">Community-Based Tourism</h4><p style="font-size: 0.95rem; color: var(--color-neutral-800);">Our work supports local communities and helps create meaningful economic opportunities through tourism.</p></div>
+                <div class="glass-card reveal" style="transition-delay: 0.15s;"><h4 style="margin-bottom: 0.5rem;">Multilingual Professional Guides</h4><p style="font-size: 0.95rem; color: var(--color-neutral-800);">Our guides speak English and French fluently and ensure clear communication for a smooth experience.</p></div>
+                <div class="glass-card reveal" style="transition-delay: 0.2s;"><h4 style="margin-bottom: 0.5rem;">Personalized Travel Experiences</h4><p style="font-size: 0.95rem; color: var(--color-neutral-800);">Every itinerary is shaped around your interests, travel style, pace, and preferred level of comfort.</p></div>
+                <div class="glass-card reveal" style="transition-delay: 0.25s;"><h4 style="margin-bottom: 0.5rem;">Trusted Local Partnerships</h4><p style="font-size: 0.95rem; color: var(--color-neutral-800);">We work with reliable local providers and community partners to deliver safe and ethical travel.</p></div>
+                <div class="glass-card reveal" style="transition-delay: 0.3s;"><h4 style="margin-bottom: 0.5rem;">Safe, Reliable and Comfortable Travel</h4><p style="font-size: 0.95rem; color: var(--color-neutral-800);">From transport to accommodation, we prioritize safety, comfort, and thoughtful planning throughout your trip.</p></div>
+            </div>
+        </div>
+    </section>
+
     <!-- Guides Section -->
     <section class="section">
         <div class="container">
             <div class="text-center reveal" style="text-align: center; margin-bottom: var(--spacing-lg);">
-                <span class="eyebrow" style="color: var(--color-primary);">Our Team</span>
-                <h2 class="section-title">MEET OUR TEAM</h2>
+                <span class="eyebrow" style="color: var(--color-primary);" data-i18n="about.team.eyebrow">Our Team</span>
+                <h2 class="section-title" data-i18n="about.team.title">Meet Our Guides</h2>
             </div>
 
             <div class="founder-grid">
                 <div class="team-card reveal" style="margin: 0;">
-                    <div class="team-img" style="height: 450px;">
-                        <img src="images/tour-guides.jpg.jfif" alt="Tour Guides Team">
-                    </div>
                     <div class="team-info">
                         <h3 class="team-name">Our Guiding Team</h3>
                         <div class="team-role">Experienced Multilingual Experts</div>
@@ -327,6 +440,30 @@
                     </div>
                 </div>
             </div>
+
+            <div class="team-grid reveal" style="margin-top: var(--spacing-lg);">
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="images/Kevin.jpeg" alt="Kevin">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Kevin — Client Relations &amp; Tour Guide</h3>
+                        <div class="team-subtitle">French &amp; English</div>
+                        <p class="team-bio">Kevin brings clear communication and attentive service to every trip, guiding both French- and English-speaking travelers with ease. From the first booking inquiry to the final drop-off, he ensures every client feels informed, comfortable, and well taken care of.</p>
+                    </div>
+                </div>
+
+                <div class="team-card" style="transition-delay: 0.1s;">
+                    <div class="team-img">
+                        <img src="images/Clotilde.jpeg" alt="Clotilde">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Clotilde — Cultural Experience &amp; Tour Guide</h3>
+                        <div class="team-subtitle">Kiswahili &amp; English</div>
+                        <p class="team-bio">Clotilde shares Rwanda's culture and history with warmth and genuine enthusiasm. Known for her friendly, easygoing personality, she has a special gift for connecting with young travelers — making her a favorite with families and a reassuring presence for parents traveling with children.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -334,8 +471,8 @@
     <section class="section" style="background-color: var(--color-neutral-200);">
         <div class="container">
             <div class="text-center reveal" style="text-align: center; margin-bottom: var(--spacing-lg);">
-                <span class="eyebrow" style="color: var(--color-primary);">Global Communication</span>
-                <h2 class="section-title">Languages Spoken by Our Guides</h2>
+                <span class="eyebrow" style="color: var(--color-primary);" data-i18n="about.lang.eyebrow">Global Communication</span>
+                <h2 class="section-title" data-i18n="about.lang.title">Languages Spoken by Our Guides</h2>
                 <p class="section-subtitle" style="margin: 0 auto;">Our multilingual guides ensure smooth, personalized experiences for travelers from around the world.</p>
             </div>
 
@@ -352,14 +489,6 @@
                     <i class="fas fa-check-circle" style="color: var(--color-accent);"></i>
                     <span style="font-weight: 600; color: var(--color-primary-dark);">Kiswahili</span>
                 </div>
-                <div class="glass-card" style="padding: 1rem 2rem; border-radius: 50px; background: white; border: 1px solid var(--color-neutral-300); display: flex; align-items: center; gap: 0.75rem;">
-                    <i class="fas fa-check-circle" style="color: var(--color-accent);"></i>
-                    <span style="font-weight: 600; color: var(--color-primary-dark);">Kinyarwanda</span>
-                </div>
-                <div class="glass-card" style="padding: 1rem 2rem; border-radius: 50px; background: white; border: 1px solid var(--color-neutral-300); display: flex; align-items: center; gap: 0.75rem;">
-                    <i class="fas fa-check-circle" style="color: var(--color-accent);"></i>
-                    <span style="font-weight: 600; color: var(--color-primary-dark);">Luganda</span>
-                </div>
             </div>
         </div>
     </section>
@@ -368,9 +497,9 @@
     <section class="section" style="background-color: var(--color-neutral-100); overflow: hidden;">
         <div class="container">
             <div class="text-center reveal" style="text-align: center; margin-bottom: var(--spacing-xl);">
-                <span class="eyebrow" style="color: var(--color-primary);">Our Growth</span>
-                <h2 class="section-title">The Journey So Far</h2>
-                <p class="section-subtitle" style="margin: 0 auto;">From a local dream to an East African legacy.</p>
+                <span class="eyebrow" style="color: var(--color-primary);" data-i18n="about.growth.eyebrow">Our Growth</span>
+                <h2 class="section-title" data-i18n="about.growth.title">The Journey So Far</h2>
+                <p class="section-subtitle" style="margin: 0 auto;" data-i18n="about.growth.subtitle">From a local dream to an East African legacy.</p>
             </div>
 
             <div class="journey-timeline">
@@ -378,7 +507,7 @@
                     <div class="journey-year">2018</div>
                     <div class="journey-content">
                         <h4>Founded in Kigali</h4>
-                        <p>Abroad Safaris LTD is born in Rwanda with a focus on intimate, high-end gorilla trekking and conservation-led tourism.</p>
+                        <p>Abroad Safaris is born in Rwanda with a focus on intimate, high-end gorilla trekking and conservation-led tourism.</p>
                     </div>
                 </div>
 
@@ -417,11 +546,11 @@
                     <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
                         <img src="images/logo.png" alt="Abroad Safaris Logo" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid var(--color-accent);">
                         <div>
-                            <h3 style="color: var(--color-accent); margin: 0; font-size: 1.25rem;">Abroad Safaris LTD</h3>
+                            <h3 style="color: var(--color-accent); margin: 0; font-size: 1.25rem;" data-i18n="footer.brand">Abroad Safaris</h3>
                             <span style="font-size: 0.65rem; letter-spacing: 2px; color: rgba(255,255,255,0.5);">EAST AFRICA SPECIALISTS</span>
                         </div>
                     </div>
-                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 1.5rem;">Rwanda-born safari specialists across East Africa.</p>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 1.5rem;" data-i18n="footer.tagline">Rwanda-born safari specialists across East Africa.</p>
                     <div class="footer-social">
                         <a href="https://www.instagram.com/abroad.safaris" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.facebook.com/abroadsafaris" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
@@ -429,7 +558,7 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Explore</h4>
+                    <h4 data-i18n="footer.col.explore">Explore</h4>
                     <ul class="footer-links">
                         <li><a href="explore.html#rwanda">Rwanda</a></li>
                         <li><a href="explore.html#kenya">Kenya</a></li>
@@ -438,26 +567,26 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Company</h4>
+                    <h4 data-i18n="footer.col.company">Company</h4>
                     <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="tours.html">Tours & Packages</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html" data-i18n="footer.link.about">About Us</a></li>
+                        <li><a href="tours.html" data-i18n="footer.link.tours">Tours & Packages</a></li>
+                        <li><a href="blog.html" data-i18n="footer.link.blog">Blog</a></li>
+                        <li><a href="contact.html" data-i18n="footer.link.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact</h4>
+                    <h4 data-i18n="footer.col.contact">Contact</h4>
                     <ul class="footer-links">
-                        <li><a href="mailto:abroad.safaris@gmail.com">abroad.safaris@gmail.com</a></li>
+                        <li><a href="contact.html">Start planning with us</a></li>
                         <li><a href="tel:+250782773963">+250 782 773 963</a></li>
-                        <li><a href="https://wa.me/250782773963" target="_blank">WhatsApp us</a></li>
+                        <li><a href="https://wa.me/250782773963" target="_blank" data-i18n="footer.link.whatsapp">WhatsApp us</a></li>
                         <li style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-top: 1rem;">KG 5 Ave, Gasabo District, Kigali, Rwanda</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Abroad Safaris LTD. All rights reserved. Licensed since 2018.</p>
+                <p>&copy; 2025 Abroad Safaris. All rights reserved. Licensed since 2018.</p>
                 <div class="footer-pills">
                     <div class="pill">rw <span>Rwanda</span></div>
                     <div class="pill">ke <span>Kenya</span></div>
@@ -468,6 +597,8 @@
         </div>
     </footer>
 
+    <script src="js/i18n.js"></script>
+    <script src="js/inject-header.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

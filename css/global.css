@@ -46,13 +46,13 @@ img {
 }
 
 .section-title {
-  font-size: clamp(1.75rem, 4.5vw, 3rem);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
   font-weight: 600;
   margin-bottom: var(--spacing-sm);
 }
 
 .section-subtitle {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   color: var(--color-neutral-800);
   opacity: 0.8;
   max-width: 600px;
@@ -64,11 +64,11 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 2rem;
+  padding: 1rem 2.25rem;
   border-radius: 50px;
   font-family: var(--font-heading);
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.125rem;
   cursor: pointer;
   transition: var(--transition-normal);
   border: none;
@@ -136,7 +136,7 @@ img {
   align-items: center;
   gap: 0.75rem;
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: var(--color-accent);
   letter-spacing: 0.5px;
@@ -160,13 +160,13 @@ img {
 }
 
 .nav-links a {
-  font-size: 0.78rem;
+  font-size: 1.05rem;
   font-weight: 500;
   position: relative;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.85);
   transition: var(--transition-fast);
   white-space: nowrap;
-  letter-spacing: -0.2px;
+  letter-spacing: 0.2px;
 }
 
 .nav-links a:hover,
@@ -194,6 +194,42 @@ img {
   display: none;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+/* Language Switcher */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+  padding: 0.2rem 0.3rem;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.65);
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
+  border-radius: 50px;
+  transition: var(--transition-fast);
+  line-height: 1;
+}
+
+.lang-btn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.lang-btn.active {
+  background: var(--color-accent);
+  color: var(--color-primary-dark);
 }
 
 /* Footer Redesign */
@@ -466,6 +502,15 @@ img {
     padding: 0.5rem 1rem;
     font-size: 0.75rem;
   }
+
+  .lang-switcher {
+    padding: 0.15rem 0.25rem;
+  }
+
+  .lang-btn {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
   
   .logo img {
     width: 50px;
@@ -475,13 +520,16 @@ img {
   .logo {
     font-size: 1rem;
   }
+  .nav-links a {
+    font-size: 0.95rem;
+  }
   
   .section {
     padding: var(--spacing-lg) 0;
   }
 
   .section-title {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
   }
 
   .footer-grid {
